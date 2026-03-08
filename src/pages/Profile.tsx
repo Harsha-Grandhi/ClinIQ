@@ -1,12 +1,14 @@
 import { useMemo } from 'react';
-import { User, Lock } from 'lucide-react';
+import { User, Lock, LogOut } from 'lucide-react';
 import { PageWrapper } from '../components/layout/PageWrapper';
 import { EloDisplay } from '../components/ui/EloDisplay';
+import { useAuth } from '../contexts/AuthContext';
 import { useUserStore } from '../store/userStore';
 import { getEloRank } from '../utils/elo';
 import { BADGE_DEFINITIONS } from '../utils/badges';
 
 export default function Profile() {
+  const { signOut } = useAuth();
   const user = useUserStore();
   const rank = getEloRank(user.eloRating);
 
@@ -32,10 +34,17 @@ export default function Profile() {
           <div className="w-16 h-16 rounded-full bg-accent-primary/10 flex items-center justify-center">
             <User size={32} className="text-accent-primary" />
           </div>
-          <div>
+          <div className="flex-1">
             <h1 className="font-display font-bold text-2xl text-text-primary">{user.name}</h1>
             <p className="text-sm text-text-muted">{user.yearOfStudy}</p>
           </div>
+          <button
+            onClick={signOut}
+            className="flex items-center gap-1.5 px-3 py-2 text-sm text-text-muted hover:text-accent-danger transition-colors cursor-pointer rounded-lg hover:bg-accent-danger/5"
+          >
+            <LogOut size={16} />
+            Sign out
+          </button>
         </div>
 
         {/* ELO + Rank */}
