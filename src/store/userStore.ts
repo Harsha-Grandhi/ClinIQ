@@ -171,7 +171,7 @@ export const useUserStore = create<UserStore>((set, get) => ({
         final_score: entry.finalScore,
         grade: entry.grade,
         elo_change: entry.eloChange,
-        investigations_used: entry.investigationsUsed,
+        investigations_used: entry.investigationsUsed as Record<string, unknown>,
       });
 
       // Update profile stats
