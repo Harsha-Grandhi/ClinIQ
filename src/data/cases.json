@@ -1,0 +1,2925 @@
+{
+  "version": "1.0",
+  "total_cases": 10,
+  "cases": [
+    {
+      "id": "card_001",
+      "title": "The Antacid That Failed",
+      "specialty": "Cardiology",
+      "difficulty": "Resident",
+      "urgency": "high",
+      "patient": {
+        "name": "Ramesh Kulkarni",
+        "age": 58,
+        "gender": "M",
+        "occupation": "Retired school principal"
+      },
+      "presentation": "Mr. Ramesh Kulkarni, 58 years old, walks into casualty at 11am with his son. He has had central chest heaviness for 6 hours, which he attributed to last night's heavy dinner. He took two Gelusil tablets at home \u2014 they gave no relief. He appears diaphoretic and keeps rubbing his chest as he speaks.",
+      "correct_diagnosis": "Inferior Wall Myocardial Infarction",
+      "diagnosis_aliases": [
+        "Inferior MI",
+        "Inferior STEMI",
+        "Inferior wall MI",
+        "STEMI",
+        "Heart attack",
+        "Acute MI",
+        "Myocardial infarction",
+        "Dil ka daura",
+        "RCA occlusion",
+        "Acute coronary syndrome"
+      ],
+      "india_context": "Acute MI in India presents a decade earlier than in Western populations, with poorly controlled diabetes and hypertension as the dominant risk factors. Misattribution to acidity or gas trouble is extremely common and causes dangerous delays in presentation to casualty.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "Does the pain radiate anywhere?",
+          "answer": "Yes, some discomfort going into my left arm. I thought I pulled a muscle carrying grocery bags yesterday.",
+          "yield": "high",
+          "hint_value": "Left arm radiation is a classic ACS feature \u2014 patient is rationalising it away, a classic anchoring trap"
+        },
+        {
+          "id": "h2",
+          "question": "Any history of diabetes or blood pressure?",
+          "answer": "Both. Sugar is there for 12 years, not well controlled. BP also high \u2014 I take one tablet but not regularly.",
+          "yield": "high",
+          "hint_value": "Poorly controlled DM + HTN = major cardiac risk factors. DM autonomic neuropathy blunts pain \u2014 explains atypical presentation"
+        },
+        {
+          "id": "h3",
+          "question": "Any previous heart problem or hospital admission?",
+          "answer": "No stents. But two years back my doctor said ECG had some changes. I never went for follow-up.",
+          "yield": "high",
+          "hint_value": "Prior ECG changes without follow-up suggests pre-existing ischaemic heart disease"
+        },
+        {
+          "id": "h4",
+          "question": "Did it come on suddenly or gradually?",
+          "answer": "Started slowly after dinner last night, became worse this morning. I thought sleeping would help but it did not.",
+          "yield": "medium",
+          "hint_value": "Gradual onset over hours with worsening \u2014 consistent with evolving MI, not aortic dissection"
+        },
+        {
+          "id": "h5",
+          "question": "Any vomiting or sweating?",
+          "answer": "Yes, vomited once this morning. And my shirt is wet \u2014 I am sweating a lot even though it is not hot.",
+          "yield": "medium",
+          "hint_value": "Diaphoresis and vomiting are vagal symptoms common in inferior MI \u2014 Bezold-Jarisch reflex from RCA ischaemia"
+        },
+        {
+          "id": "h6",
+          "question": "Any travel recently or leg swelling?",
+          "answer": "No travel. No leg swelling that I know of.",
+          "yield": "low",
+          "hint_value": "Screens for PE as a mimic \u2014 negative here, low yield in this context"
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Heart Rate",
+              "result": "58 bpm \u2014 bradycardic",
+              "yield": "high"
+            },
+            {
+              "id": "e2",
+              "name": "Blood Pressure",
+              "result": "92/60 mmHg \u2014 hypotensive",
+              "yield": "high"
+            },
+            {
+              "id": "e3",
+              "name": "SpO2 and RR",
+              "result": "SpO2 97% on room air. RR 18/min.",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "region": "Cardiac",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "Auscultation",
+              "result": "S1 S2 heard. No murmurs. S4 gallop present at apex.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "JVP",
+              "result": "JVP elevated at 5cm above sternal angle \u2014 right heart involvement",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Cardiac Markers",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "Troponin I",
+              "value": "3.2 ng/mL",
+              "normal_range": "< 0.04 ng/mL",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "CK-MB",
+              "value": "74 U/L",
+              "normal_range": "< 25 U/L",
+              "flag": "high",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "panel": "Haematology",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "CBC",
+              "value": "WBC 11.8 \u00d7 10\u2079/L, Hb 13.2 g/dL, Platelets 218 \u00d7 10\u2079/L",
+              "normal_range": "WBC 4\u201311, Hb 13\u201317, Plt 150\u2013400",
+              "flag": "high",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Metabolic",
+          "tests": [
+            {
+              "id": "l4",
+              "name": "Random Blood Glucose",
+              "value": "238 mg/dL",
+              "normal_range": "< 140 mg/dL post-meal",
+              "flag": "high",
+              "yield": "medium"
+            },
+            {
+              "id": "l5",
+              "name": "Serum Creatinine",
+              "value": "1.3 mg/dL",
+              "normal_range": "0.7\u20131.2 mg/dL",
+              "flag": "high",
+              "yield": "low"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "ECG",
+          "region": "Cardiac",
+          "cost_points": 35,
+          "report": "Rate: 58 bpm. Rhythm: Sinus bradycardia.\n\nST elevation of 2\u20133mm in leads II, III, aVF.\nReciprocal ST depression in leads I and aVL.\nEarly Q wave formation in lead III.\nNo ST changes in precordial leads V1\u2013V6.\n\nImpression: Acute inferior wall MI. Pattern consistent with RCA occlusion. Bradycardia may reflect vagal tone or early AV node involvement (RCA supplies AV node in 85% of individuals).",
+          "yield": "high"
+        },
+        {
+          "id": "i2",
+          "modality": "X-Ray",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "Heart size: Upper limit of normal (CT ratio 0.52).\nLung fields: Clear. No pulmonary oedema. No pleural effusion.\nMediastinum: Normal width.\n\nImpression: No acute pulmonary pathology. CXR does not exclude ACS \u2014 this is a clinical and ECG diagnosis.",
+          "yield": "medium"
+        },
+        {
+          "id": "i3",
+          "modality": "Echo",
+          "region": "Cardiac",
+          "cost_points": 35,
+          "report": "LV: Regional wall motion abnormality \u2014 hypokinesia of inferior and posterior walls. EF 45% (mildly reduced).\nRV: Mildly dilated with reduced function \u2014 consistent with RV infarction.\nValves: Trivial MR. Aortic valve normal.\nPericardium: No effusion.\n\nImpression: Acute inferior + right ventricular MI. RV involvement: avoid nitrates and aggressive diuresis.",
+          "yield": "high"
+        }
+      ],
+      "differential_decoys": [
+        "GERD / Gastritis",
+        "Aortic Dissection",
+        "Unstable Angina",
+        "Acute Pericarditis"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2"
+        ],
+        "exam_ids": [
+          "e1",
+          "e2",
+          "e4",
+          "e5"
+        ],
+        "lab_ids": [
+          "l1",
+          "l2"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "In a middle-aged diabetic male with chest heaviness and diaphoresis, do ECG first \u2014 it gives the diagnosis immediately at the same cost as labs. Two history questions (radiation + risk factors) establish suspicion. Vitals showing bradycardia and hypotension in an MI patient is the RV involvement clue. Troponin confirms the ECG finding."
+      },
+      "debrief": {
+        "pathophysiology": "Acute occlusion of the Right Coronary Artery (RCA) causes transmural ischaemia of the inferior LV wall, seen as ST elevation in leads II, III, aVF. The RCA supplies the RV and AV node in 85% of people, explaining RV infarction and bradycardia respectively. The Bezold-Jarisch reflex \u2014 increased vagal tone from inferior wall ischaemia \u2014 further causes bradycardia, hypotension, and vomiting.",
+        "classic_presentation": "Middle-aged male with cardiac risk factors presenting with central or epigastric heaviness, diaphoresis, nausea/vomiting, left arm or jaw radiation. Inferior MIs often mimic GI illness \u2014 epigastric pain and vomiting are more prominent than in anterior MIs. Bradycardia and hypotension (not tachycardia) are characteristic.",
+        "key_discriminators": [
+          "ST elevation in II, III, aVF with reciprocal depression in I, aVL",
+          "Bradycardia + hypotension (not tachycardia \u2014 Bezold-Jarisch reflex)",
+          "Elevated JVP with clear lungs \u2014 RV infarction triad",
+          "Critically elevated Troponin I and CK-MB"
+        ],
+        "common_mimics": [
+          "GERD/Gastritis \u2014 shares epigastric location and post-meal onset, but antacids provide relief, no troponin rise, no ECG changes",
+          "Aortic Dissection \u2014 tearing pain radiating to back, BP asymmetry between arms, mediastinal widening on CXR",
+          "Acute Pericarditis \u2014 diffuse saddle-shaped ST elevation, PR depression, sharp positional pain worse lying flat, friction rub"
+        ],
+        "treatment": "Dual antiplatelet therapy: Ecosprin (Aspirin) 300mg + Clopidogrel 600mg or Ticagrelor 180mg immediately. Primary PCI within 90 minutes is gold standard \u2014 activate cath lab. If PCI unavailable within 120 minutes, fibrinolysis (Tenecteplase or Streptokinase) within 30 minutes of arrival. For RV infarction: avoid nitrates completely; give cautious IV fluids to maintain preload.",
+        "clinical_pearl": "RV infarction complicates 30\u201350% of inferior MIs. Always do right-sided ECG leads (V3R, V4R) in any inferior MI \u2014 ST elevation in V4R confirms RV involvement. The haemodynamic triad: hypotension + elevated JVP + clear lungs = RV infarction. Giving nitrates to these patients causes catastrophic hypotension.",
+        "attendings_note": "This patient told you it was gas trouble and you almost believed him. I want you to remember this \u2014 in a 58-year-old poorly controlled diabetic male with diaphoresis, 'chest heaviness that does not respond to Gelusil' is a heart attack until the ECG proves otherwise. The word 'acidity' should have raised your suspicion, not lowered it. Diabetic patients get silent or atypical MIs because neuropathy blunts their pain. When the pain is vague and the patient is minimising it, your clinical suspicion must be loud.\n\nNow look at his vitals carefully. Bradycardic at 58, BP only 92/60. Every student expects a heart attack patient to be tachycardic and sweaty \u2014 yes, sweaty, but not bradycardic. Inferior MIs are different. The Bezold-Jarisch reflex slows the heart down. And his elevated JVP with clear lungs tells you the right ventricle is involved. This is the empty LV syndrome \u2014 the right heart cannot fill the left heart, and if you give nitrates now you will kill him.\n\nThe correct move was ECG within 2 minutes of arrival \u2014 before bloods, before anything else. You ordered troponin first, which is understandable, but troponin takes hours to rise. In the first hour of a heart attack, the ECG is positive and the troponin can still be completely normal. Never delay the ECG for blood tests in any chest pain patient.",
+        "india_context": "Acute MI in India presents a decade earlier than in Western populations \u2014 a 58-year-old here is equivalent to a 68-year-old in European studies. Misattribution to acidity or gas trouble is the single biggest cause of delayed presentation in Indian casualties. Pan masala, tobacco chewing, and bidi smoking are important additional risk factors to screen for.",
+        "learning_tags": [
+          "anchoring_bias",
+          "ecg_interpretation",
+          "inferior_wall_mi",
+          "rv_infarction",
+          "bezold_jarisch_reflex",
+          "atypical_presentation",
+          "diabetic_cardiac_disease",
+          "ecg_before_troponin"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same disease, atypical presentation",
+          "teaser": "62F diabetic woman presents with fatigue and jaw pain \u2014 no chest pain at all",
+          "teaches": "Silent MI in women and diabetics \u2014 how ischaemia presents without classic chest pain"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "52M hypertensive, sudden tearing chest pain radiating to back, BP asymmetry between arms",
+          "teaches": "Aortic dissection vs ACS \u2014 features that distinguish them and why getting it wrong is fatal"
+        },
+        {
+          "label": "Same chief complaint, different diagnosis",
+          "teaser": "28M, sharp chest pain worse lying flat, improves leaning forward, fever 2 days ago",
+          "teaches": "Acute pericarditis \u2014 saddle-shaped ST, PR depression, and why this ECG looks different from MI"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "card_002",
+      "title": "Drowning From the Inside",
+      "specialty": "Cardiology",
+      "difficulty": "Intern",
+      "urgency": "high",
+      "patient": {
+        "name": "Saraswathi Venkataraman",
+        "age": 65,
+        "gender": "F",
+        "occupation": "Retired schoolteacher"
+      },
+      "presentation": "Mrs. Saraswathi Venkataraman, 65 years old, is brought to casualty at 3am by her daughter. She woke up suddenly unable to breathe and has been sitting upright ever since \u2014 she says lying down makes it much worse. She has been on 'BP tablets' for many years but stopped them 2 weeks ago because she 'felt fine'. On examination she is visibly breathless and you can hear a gurgling sound from across the room.",
+      "correct_diagnosis": "Acute Left Ventricular Failure",
+      "diagnosis_aliases": [
+        "Acute LVF",
+        "Pulmonary oedema",
+        "Acute pulmonary edema",
+        "Cardiogenic pulmonary oedema",
+        "Acute heart failure",
+        "Decompensated heart failure",
+        "Flash pulmonary oedema"
+      ],
+      "india_context": "Hypertension is the leading cause of heart failure in India, and medication non-compliance is extremely common \u2014 patients often stop antihypertensives when they feel well. Acute LVF presenting at night (paroxysmal nocturnal dyspnoea) is a classic pattern that students must recognise immediately as a cardiac emergency.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "Did she stop any medicines recently?",
+          "answer": "Yes, she stopped her BP tablet \u2014 Amlodipine \u2014 about 2 weeks ago. She said she was feeling fine and the tablet was causing ankle swelling.",
+          "yield": "high",
+          "hint_value": "Abrupt antihypertensive discontinuation causes rebound hypertension which precipitates acute LVF \u2014 this is the trigger"
+        },
+        {
+          "id": "h2",
+          "question": "How many pillows does she sleep on at night?",
+          "answer": "Three pillows for the last 6 months. She cannot sleep flat \u2014 she says it makes her breathless.",
+          "yield": "high",
+          "hint_value": "Orthopnoea (3-pillow orthopnoea) indicates elevated left atrial pressure \u2014 chronic heart failure is the background"
+        },
+        {
+          "id": "h3",
+          "question": "Any swelling in the legs?",
+          "answer": "Yes, both ankles swollen for the last 2\u20133 months. She thought it was from standing too long.",
+          "yield": "high",
+          "hint_value": "Bilateral pedal oedema = fluid overload, consistent with chronic heart failure now acutely decompensated"
+        },
+        {
+          "id": "h4",
+          "question": "Any previous heart attack or heart problem?",
+          "answer": "No heart attack she knows of. But she has been on BP medicines for 15 years. One doctor said her heart was 'a little weak' last year but she did not follow up.",
+          "yield": "medium",
+          "hint_value": "Known hypertension for 15 years + 'weak heart' = hypertensive cardiomyopathy as underlying cause"
+        },
+        {
+          "id": "h5",
+          "question": "Any cough? What does it look like?",
+          "answer": "Yes, coughing a lot since last night. The sputum is pinkish \u2014 she thought she had a chest infection.",
+          "yield": "medium",
+          "hint_value": "Pink frothy sputum is pathognomonic of pulmonary oedema \u2014 student may mistake this for pneumonia"
+        },
+        {
+          "id": "h6",
+          "question": "Any fever or recent illness?",
+          "answer": "No fever. No cold or cough before last night. No sick contacts.",
+          "yield": "low",
+          "hint_value": "Absence of fever makes infective cause less likely \u2014 helps rule out pneumonia as primary diagnosis"
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Blood Pressure",
+              "result": "192/110 mmHg \u2014 severely hypertensive",
+              "yield": "high"
+            },
+            {
+              "id": "e2",
+              "name": "Heart Rate and SpO2",
+              "result": "HR 112 bpm. SpO2 82% on room air \u2014 critically low.",
+              "yield": "high"
+            },
+            {
+              "id": "e3",
+              "name": "Respiratory Rate",
+              "result": "34/min \u2014 severely tachypnoeic. Using accessory muscles.",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "region": "Chest",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "Auscultation \u2014 Lungs",
+              "result": "Bilateral fine crepitations from bases to mid-zones. Expiratory wheeze bilaterally (cardiac asthma).",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Auscultation \u2014 Heart",
+              "result": "S1 S2 heard. S3 gallop present. No murmurs.",
+              "yield": "high"
+            },
+            {
+              "id": "e6",
+              "name": "JVP",
+              "result": "JVP elevated at 6cm above sternal angle.",
+              "yield": "medium"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Cardiac Markers",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "BNP (B-type Natriuretic Peptide)",
+              "value": "890 pg/mL",
+              "normal_range": "< 100 pg/mL",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "Troponin I",
+              "value": "0.06 ng/mL",
+              "normal_range": "< 0.04 ng/mL",
+              "flag": "high",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Haematology and Metabolic",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "CBC",
+              "value": "WBC 9.2 \u00d7 10\u2079/L, Hb 11.8 g/dL, Platelets 210 \u00d7 10\u2079/L",
+              "normal_range": "WBC 4\u201311, Hb 12\u201316, Plt 150\u2013400",
+              "flag": "low",
+              "yield": "low"
+            },
+            {
+              "id": "l4",
+              "name": "Serum Creatinine",
+              "value": "1.6 mg/dL",
+              "normal_range": "0.5\u20131.1 mg/dL",
+              "flag": "high",
+              "yield": "medium"
+            },
+            {
+              "id": "l5",
+              "name": "Serum Potassium",
+              "value": "3.2 mEq/L",
+              "normal_range": "3.5\u20135.0 mEq/L",
+              "flag": "low",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "ABG (Arterial Blood Gas)",
+          "tests": [
+            {
+              "id": "l6",
+              "name": "pH",
+              "value": "7.31",
+              "normal_range": "7.35\u20137.45",
+              "flag": "low",
+              "yield": "high"
+            },
+            {
+              "id": "l7",
+              "name": "PaO2",
+              "value": "52 mmHg",
+              "normal_range": "80\u2013100 mmHg",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "X-Ray",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "Cardiomegaly: present (CT ratio 0.58).\nUpper lobe venous diversion: present.\nBilateral perihilar haziness: 'bat-wing' pattern of pulmonary oedema.\nKerley B lines: present at bases.\nBilateral pleural effusions: small, more prominent on right.\n\nImpression: Appearances consistent with acute pulmonary oedema. Cardiomegaly suggests underlying cardiomyopathy.",
+          "yield": "high"
+        },
+        {
+          "id": "i2",
+          "modality": "ECG",
+          "region": "Cardiac",
+          "cost_points": 35,
+          "report": "Rate: 112 bpm. Rhythm: Sinus tachycardia.\nLVH criteria: Sokolow-Lyon index positive (S in V1 + R in V5 = 38mm).\nST depression: 1mm in V4\u2013V6 (strain pattern).\nNo acute ST elevation.\n\nImpression: LVH with strain pattern. No acute MI. Consistent with hypertensive heart disease.",
+          "yield": "medium"
+        },
+        {
+          "id": "i3",
+          "modality": "Echo",
+          "region": "Cardiac",
+          "cost_points": 35,
+          "report": "LV: Concentric hypertrophy. EF 35% (severely reduced). Global hypokinesia.\nLA: Dilated.\nValves: Mild mitral regurgitation.\nIVC: Dilated, non-collapsing \u2014 elevated RA pressure.\n\nImpression: Hypertensive cardiomyopathy with severely reduced EF. Findings consistent with acute decompensated heart failure.",
+          "yield": "high"
+        }
+      ],
+      "differential_decoys": [
+        "Pneumonia",
+        "Acute severe asthma",
+        "COPD exacerbation",
+        "Pulmonary Embolism"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h3"
+        ],
+        "exam_ids": [
+          "e1",
+          "e2",
+          "e4",
+          "e5"
+        ],
+        "lab_ids": [
+          "l1",
+          "l6",
+          "l7"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "The triad of sudden nocturnal breathlessness + orthopnoea + bilateral crepitations in a known hypertensive who stopped medications points directly to acute LVF. CXR gives the bat-wing pattern and confirms the diagnosis fast. BNP markedly elevated confirms cardiac origin. ABG shows hypoxia severity and guides oxygen therapy. ECG shows LVH + strain but no acute MI. Echo confirms EF and underlying cardiomyopathy."
+      },
+      "debrief": {
+        "pathophysiology": "Abrupt discontinuation of antihypertensives caused rebound hypertension, dramatically increasing left ventricular afterload. The already hypertrophied and dysfunctional LV (from 15 years of hypertension) could not maintain forward output, causing acute backpressure into the pulmonary circulation. Fluid transudates into alveolar spaces, impairing gas exchange \u2014 producing the characteristic pink frothy sputum and bilateral crepitations.",
+        "classic_presentation": "Elderly patient with known hypertension, waking suddenly from sleep unable to breathe (paroxysmal nocturnal dyspnoea), sitting bolt upright, orthopnoeic, with pink frothy sputum, bilateral crepitations, and markedly elevated BP. Often a history of missed medications or dietary salt excess as a precipitant.",
+        "key_discriminators": [
+          "Paroxysmal nocturnal dyspnoea + orthopnoea (cardiac) vs fever + productive cough (pneumonia)",
+          "Bilateral crepitations from bases upward + S3 gallop = cardiogenic",
+          "Pink frothy sputum is pathognomonic of pulmonary oedema",
+          "CXR bat-wing perihilar haziness + Kerley B lines + cardiomegaly = LVF not pneumonia"
+        ],
+        "common_mimics": [
+          "Pneumonia \u2014 fever, focal consolidation on CXR, productive purulent sputum, no orthopnoea",
+          "Acute severe asthma \u2014 wheeze prominent, younger patient, no cardiomegaly, normal BNP",
+          "COPD exacerbation \u2014 known smoker with barrel chest, hyperinflation on CXR, no orthopnoea or S3"
+        ],
+        "treatment": "Sit patient upright immediately. High-flow oxygen, target SpO2 > 94%. IV Furosemide (Lasix) 40\u201380mg stat \u2014 diuresis reduces preload. IV morphine 2\u20134mg for anxiolysis and venodilation (use cautiously). IV nitrates (GTN infusion) to reduce afterload \u2014 only if SBP > 110 mmHg. If not responding, consider BiPAP/NIV. Monitor urine output, K+, creatinine closely.",
+        "clinical_pearl": "Cardiac asthma \u2014 bilateral wheeze in acute LVF \u2014 is frequently mistaken for bronchial asthma and treated with bronchodilators alone, which can be dangerous. The key differentiator is the cardiac history, orthopnoea, and CXR findings. A bedside BNP or NT-proBNP, if available, instantly separates cardiac from pulmonary dyspnoea.",
+        "attendings_note": "She stopped her Amlodipine because she felt fine \u2014 this is the most common story I hear in casualty every week. You must counsel every hypertensive patient that they will feel fine because the medicines are working, not because the disease is gone. The moment they stop, the rebound can land them in casualty gasping for breath at 3am.\n\nNow, when you hear bilateral wheeze in a breathless patient, your first instinct may be to reach for a nebuliser. That would be a mistake here. This is cardiac asthma \u2014 the wheeze comes from peribronchial oedema in the lungs, not from bronchospasm. If you give salbutamol and miss the LVF, she will deteriorate. Always look at the full picture: elderly, hypertensive, orthopnoeic, S3 gallop, bilateral crepitations from the bases upward, pink frothy sputum. This is a drowning lung, not an asthmatic one.\n\nThe CXR here is a textbook \u2014 bat-wing shadowing, Kerley B lines, cardiomegaly, upper lobe diversion. Learn this film. It will save lives.",
+        "india_context": "Hypertension is the commonest cause of heart failure in India, unlike in the West where ischaemic heart disease dominates. Medication non-compliance, driven by cost and the feeling of being 'cured,' is the most common precipitant of acute decompensation. Salt-heavy diets (pickles, papads, processed foods) are a major contributing factor in Indian patients.",
+        "learning_tags": [
+          "premature_closure",
+          "cardiac_asthma",
+          "pulmonary_oedema",
+          "medication_noncompliance",
+          "hypertensive_emergency",
+          "bnp_interpretation",
+          "cxr_interpretation",
+          "lvf"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same chief complaint, different diagnosis",
+          "teaser": "35M smoker, acute breathlessness, wheeze, known asthmatic, triggered by dust exposure",
+          "teaches": "Acute severe asthma \u2014 how to distinguish from cardiac asthma when both present with breathlessness and wheeze"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "70F, fever 3 days, worsening breathlessness, right-sided dullness on percussion",
+          "teaches": "Pneumonia with parapneumonic effusion \u2014 focal findings, fever, and CXR consolidation vs LVF pattern"
+        },
+        {
+          "label": "Same disease, different trigger",
+          "teaser": "55M post-STEMI day 3, suddenly breathless, SpO2 dropping",
+          "teaches": "Acute LVF as a complication of MI \u2014 mechanical causes including papillary muscle rupture and VSD"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "neuro_001",
+      "title": "Not Just the Drinks",
+      "specialty": "Neurology",
+      "difficulty": "Resident",
+      "urgency": "high",
+      "patient": {
+        "name": "Debabrata Ghosh",
+        "age": 62,
+        "gender": "M",
+        "occupation": "Retired government officer"
+      },
+      "presentation": "Mr. Debabrata Ghosh, 62 years old, is brought to casualty by his wife at 9pm. His wife says he suddenly started speaking 'strangely' about 2 hours ago and his right side of the face is drooping. His son, who called the ambulance, told the triage nurse 'he has had a few drinks at a family function tonight \u2014 this is probably the alcohol.' Mr. Ghosh has known atrial fibrillation and was prescribed Warfarin six months ago but stopped it after a minor cut bled 'too much.'",
+      "correct_diagnosis": "Acute Ischaemic Stroke",
+      "diagnosis_aliases": [
+        "Ischaemic stroke",
+        "CVA",
+        "Cerebrovascular accident",
+        "MCA territory infarct",
+        "Stroke",
+        "Brain attack",
+        "Thrombotic stroke",
+        "Cardioembolic stroke",
+        "Dimag ki nase phatna"
+      ],
+      "india_context": "Stroke is the second leading cause of death in India. Atrial fibrillation without anticoagulation is a major preventable cause, yet Warfarin compliance is poor due to cost, monitoring burden, and fear of bleeding. The 'brain attack' campaign has had limited reach in non-metro India \u2014 delays in presentation beyond the thrombolysis window are very common.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "Exactly when did the symptoms start?",
+          "answer": "His wife says he was completely normal until 6:45pm. He stood up from his chair at the function and his face suddenly drooped and he started speaking unclearly.",
+          "yield": "high",
+          "hint_value": "Sudden onset is the hallmark of stroke \u2014 not gradual like alcohol intoxication which builds over time. Time of onset determines thrombolysis eligibility"
+        },
+        {
+          "id": "h2",
+          "question": "Does he have atrial fibrillation or any heart condition?",
+          "answer": "Yes, AF diagnosed 6 months ago. He was given Warfarin but stopped it after 3 weeks because a small cut on his hand bled for a long time and it scared him.",
+          "yield": "high",
+          "hint_value": "AF without anticoagulation = very high cardioembolic stroke risk (CHADS2 score likely 3\u20134). This is the aetiology"
+        },
+        {
+          "id": "h3",
+          "question": "Is there any weakness in his arms or legs?",
+          "answer": "Yes \u2014 his wife noticed he cannot lift his right arm at all. His right leg is also weak but he can move it slightly.",
+          "yield": "high",
+          "hint_value": "Right-sided hemiparesis + facial droop + aphasia = left MCA territory involvement"
+        },
+        {
+          "id": "h4",
+          "question": "How much did he drink tonight?",
+          "answer": "Two small glasses of whisky over 3 hours. He drinks occasionally at functions but never gets this way.",
+          "yield": "medium",
+          "hint_value": "Minimal alcohol, disproportionate neurological deficit \u2014 alcohol intoxication cannot explain focal neurological signs"
+        },
+        {
+          "id": "h5",
+          "question": "Any headache or vomiting?",
+          "answer": "No headache. No vomiting. His wife says he did not complain of any head pain.",
+          "yield": "medium",
+          "hint_value": "Absence of severe headache makes haemorrhagic stroke less likely \u2014 but CT is mandatory to confirm"
+        },
+        {
+          "id": "h6",
+          "question": "Any similar episode before, even briefly?",
+          "answer": "Actually yes \u2014 last week he had a funny episode for about 20 minutes where his speech became slurred and then completely resolved. He said it was tiredness.",
+          "yield": "high",
+          "hint_value": "Previous TIA (transient ischaemic attack) is a major red flag \u2014 high risk of completed stroke within 48 hours. ABCD2 score should have been calculated then"
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Blood Pressure",
+              "result": "168/94 mmHg \u2014 elevated",
+              "yield": "medium"
+            },
+            {
+              "id": "e2",
+              "name": "Pulse",
+              "result": "Irregular rhythm, rate 88 bpm \u2014 consistent with atrial fibrillation",
+              "yield": "high"
+            },
+            {
+              "id": "e3",
+              "name": "Blood Glucose (Glucometer)",
+              "result": "102 mg/dL \u2014 normal. No hypoglycaemia.",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "region": "Neuro",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "GCS",
+              "result": "E4V3M6 = 13/15. Alert but confused.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Facial Nerve",
+              "result": "Right lower motor neurone pattern facial droop \u2014 right nasolabial fold flattened, unable to show teeth on right side.",
+              "yield": "high"
+            },
+            {
+              "id": "e6",
+              "name": "Power Assessment",
+              "result": "Right arm: 1/5. Right leg: 3/5. Left side: 5/5 normal.",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Coagulation",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "INR",
+              "value": "1.1",
+              "normal_range": "0.8\u20131.2 (therapeutic for AF: 2.0\u20133.0)",
+              "flag": "normal",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "PT / APTT",
+              "value": "PT 12 sec, APTT 30 sec",
+              "normal_range": "PT 11\u201314 sec, APTT 25\u201335 sec",
+              "flag": "normal",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Metabolic and Haematology",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "CBC",
+              "value": "WBC 9.0, Hb 14.1, Platelets 224",
+              "normal_range": "WBC 4\u201311, Hb 13\u201317, Plt 150\u2013400",
+              "flag": "normal",
+              "yield": "low"
+            },
+            {
+              "id": "l4",
+              "name": "Random Blood Glucose",
+              "value": "108 mg/dL",
+              "normal_range": "< 140 mg/dL",
+              "flag": "normal",
+              "yield": "medium"
+            },
+            {
+              "id": "l5",
+              "name": "Serum Electrolytes",
+              "value": "Na 138, K 4.0, Cl 101 mEq/L",
+              "normal_range": "Na 135\u2013145, K 3.5\u20135.0",
+              "flag": "normal",
+              "yield": "low"
+            }
+          ]
+        },
+        {
+          "panel": "Lipid Profile",
+          "tests": [
+            {
+              "id": "l6",
+              "name": "Total Cholesterol",
+              "value": "218 mg/dL",
+              "normal_range": "< 200 mg/dL",
+              "flag": "high",
+              "yield": "low"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "CT",
+          "region": "Head",
+          "cost_points": 35,
+          "report": "No acute haemorrhage identified.\nNo obvious early infarct changes \u2014 note: CT may be normal in first 6\u201312 hours of ischaemic stroke.\nNo midline shift.\nNo space-occupying lesion.\nOld lacunar infarct in right basal ganglia.\n\nImpression: No intracranial haemorrhage. Early ischaemic stroke cannot be excluded \u2014 clinical correlation essential. MRI diffusion-weighted imaging (DWI) recommended if available.",
+          "yield": "high"
+        },
+        {
+          "id": "i2",
+          "modality": "MRI",
+          "region": "Head",
+          "cost_points": 35,
+          "report": "DWI sequence: Acute restricted diffusion in left MCA territory \u2014 involving left fronto-parietal cortex and corona radiata.\nADC map: Corresponding dark signal confirming acute ischaemia.\nNo haemorrhagic transformation.\nOld lacunar infarct right basal ganglia (T2 bright, DWI negative).\n\nImpression: Acute left MCA territory ischaemic infarct. Findings consistent with cardioembolic aetiology given AF history.",
+          "yield": "high"
+        },
+        {
+          "id": "i3",
+          "modality": "ECG",
+          "region": "Cardiac",
+          "cost_points": 35,
+          "report": "Rhythm: Atrial fibrillation with controlled ventricular rate, 88 bpm.\nNo P waves. Irregularly irregular QRS complexes.\nNo ST changes or LVH.\n\nImpression: Atrial fibrillation confirmed. No acute ischaemic changes.",
+          "yield": "high"
+        }
+      ],
+      "differential_decoys": [
+        "Alcohol intoxication",
+        "Todd's paresis post-seizure",
+        "Hypoglycaemia",
+        "Hypertensive encephalopathy"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h6"
+        ],
+        "exam_ids": [
+          "e3",
+          "e4",
+          "e5",
+          "e6"
+        ],
+        "lab_ids": [
+          "l1",
+          "l4"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Sudden onset focal neurological deficit (facial droop, hemiparesis, aphasia) in a patient with AF off anticoagulation is a stroke until proven otherwise. First move: glucometer \u2014 rule out hypoglycaemia as a reversible mimic in 30 seconds. Then non-contrast CT head to exclude haemorrhage and determine thrombolysis eligibility. Time from onset is the most critical piece of history \u2014 window for IV tPA is 4.5 hours."
+      },
+      "debrief": {
+        "pathophysiology": "Atrial fibrillation causes stagnant blood flow in the left atrial appendage, promoting thrombus formation. Warfarin discontinuation allowed the INR to normalise, removing the only anticoagulant protection. A thrombus embolised to the left middle cerebral artery, causing sudden occlusion and ischaemia of the left fronto-parietal cortex \u2014 producing contralateral (right-sided) hemiparesis, facial droop, and expressive aphasia (Broca's area involvement).",
+        "classic_presentation": "Sudden onset focal neurological deficit \u2014 FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency. In AF-associated cardioembolic stroke: maximal deficit at onset (no stuttering), large vessel territory involvement, often haemorrhagic transformation on follow-up imaging.",
+        "key_discriminators": [
+          "Sudden onset vs gradual (alcohol, metabolic encephalopathy)",
+          "Focal deficits \u2014 alcohol intoxication causes global confusion, not unilateral weakness",
+          "Normal glucometer \u2014 hypoglycaemia mimics stroke and must be ruled out in 30 seconds",
+          "Irregular pulse (AF) in a patient off anticoagulation = cardioembolic stroke until proven otherwise"
+        ],
+        "common_mimics": [
+          "Alcohol intoxication \u2014 slurred speech and unsteadiness, but bilateral, no focal motor deficits, resolves with time",
+          "Hypoglycaemia \u2014 can cause focal neurological deficits, must check glucometer immediately, corrects with dextrose",
+          "Todd's paresis \u2014 post-ictal weakness after seizure, but there is a witnessed seizure history and gradual recovery"
+        ],
+        "treatment": "Immediate: Check time of onset, rule out hypoglycaemia, non-contrast CT head. If ischaemic and within 4.5 hours: IV Alteplase (tPA) 0.9 mg/kg (max 90mg). If eligible for mechanical thrombectomy and large vessel occlusion confirmed on CTA: transfer to thrombectomy-capable centre immediately. Restart anticoagulation for AF: Warfarin (target INR 2\u20133) or a NOAC (Apixaban or Rivaroxaban) \u2014 timing of restart after stroke is debated, typically 2\u20134 weeks. Aspirin 150mg daily in first 2 weeks if not thrombolysed.",
+        "clinical_pearl": "The 4.5-hour thrombolysis window makes time of onset the single most important piece of history in stroke. Every minute of delay = 1.9 million neurons lost. When the family says 'we don't know when exactly,' find out when he was last known to be normal \u2014 that is your onset time. In AF patients who stopped anticoagulation, ALWAYS calculate CHADS2-VASc score before discharge \u2014 it will likely be \u2265 4, meaning very high stroke risk and mandatory anticoagulation.",
+        "attendings_note": "The family told you it was alcohol and you almost wrote that in the notes. I want you to understand something fundamental: alcohol does not cause unilateral facial droop. Alcohol does not cause right arm power of 1/5 with left arm completely normal. Alcohol causes global, bilateral, symmetrical effects. Any focal neurological deficit \u2014 focal, meaning one side, one limb, one nerve \u2014 is a stroke until the CT tells you otherwise.\n\nThis patient had a TIA last week. He told his family it was tiredness. If he had come to casualty that day, we could have anticoagulated him and prevented this stroke entirely. The ABCD2 score after a TIA predicts 2-day stroke risk \u2014 his score was almost certainly 5\u20136, meaning very high risk. We missed him once. Do not miss him again.\n\nAnd the Warfarin \u2014 he stopped it because a small cut bled. You will see this story repeatedly. The fear of bleeding from Warfarin stops patients taking it, and then they come in with a stroke instead. Counsel your AF patients: a minor cut is nothing compared to a massive stroke. If Warfarin monitoring is a burden, prescribe Apixaban \u2014 fixed dose, no monitoring needed.",
+        "india_context": "Stroke mortality and disability in India are disproportionately high due to late presentation and limited thrombolysis availability outside tier-1 cities. AF-related stroke is largely preventable but anticoagulation uptake remains poor due to Warfarin monitoring burden and cost. NOACs (Apixaban, Rivaroxaban) are increasingly available but still out of reach for many patients. The FAST campaign awareness is very low in rural India.",
+        "learning_tags": [
+          "anchoring_bias",
+          "alcohol_misattribution",
+          "stroke_mimics",
+          "tia_red_flag",
+          "thrombolysis_window",
+          "af_anticoagulation",
+          "focal_vs_global_deficit",
+          "time_is_brain"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same chief complaint, different diagnosis",
+          "teaser": "45M known epileptic, found confused with right arm weakness after witnessed seizure",
+          "teaches": "Todd's paresis \u2014 post-ictal focal weakness and how to distinguish from stroke"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "32F found confused and sweaty, glucometer reads 38 mg/dL",
+          "teaches": "Hypoglycaemia mimicking stroke \u2014 why glucometer is the first test in every altered sensorium"
+        },
+        {
+          "label": "Same disease, different territory",
+          "teaser": "70M, sudden severe headache 'worst of my life', neck stiffness, vomiting",
+          "teaches": "Subarachnoid haemorrhage \u2014 haemorrhagic stroke vs ischaemic stroke and why headache severity matters"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "neuro_002",
+      "title": "The Worst Headache of His Life",
+      "specialty": "Neurology",
+      "difficulty": "Intern",
+      "urgency": "high",
+      "patient": {
+        "name": "Akash Tiwari",
+        "age": 22,
+        "gender": "M",
+        "occupation": "Engineering student, hostel resident"
+      },
+      "presentation": "Akash Tiwari, a 22-year-old engineering student, is brought to casualty by his hostel roommates at midnight. He has had a headache since this morning that he described as 'the worst headache of my life.' He took two Crocin tablets \u2014 no relief. By evening he developed fever and began vomiting. His roommates initially thought he had a migraine because 'he gets headaches during exams.' He is now drowsy and cannot look at the bright lights in casualty.",
+      "correct_diagnosis": "Bacterial Meningitis",
+      "diagnosis_aliases": [
+        "Meningitis",
+        "Acute bacterial meningitis",
+        "Purulent meningitis",
+        "Pyogenic meningitis",
+        "Pneumococcal meningitis",
+        "Meningococcal meningitis",
+        "CNS infection"
+      ],
+      "india_context": "Bacterial meningitis in India most commonly affects young adults in close-contact settings such as college hostels and army barracks. Streptococcus pneumoniae is the leading cause in adults. Diagnosis is frequently delayed because early presentation mimics viral fever or migraine. Lumbar puncture is still under-utilised in many peripheral hospitals due to unfounded fear of herniation in cases without raised ICP.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "How severe is the headache and how quickly did it come on?",
+          "answer": "He says it is the worst headache he has ever had \u2014 he rated it 10/10. It came on over a few hours this morning and has been getting steadily worse. Paracetamol gave no relief at all.",
+          "yield": "high",
+          "hint_value": "Severe headache unresponsive to analgesia with rapid progression \u2014 never dismiss in a young patient. Thunderclap headache is SAH; progressive severe headache with fever is meningitis."
+        },
+        {
+          "id": "h2",
+          "question": "Any neck stiffness or difficulty bending the neck?",
+          "answer": "Yes, when his roommates tried to help him look down at his phone he said his neck hurt and he could not bend it properly.",
+          "yield": "high",
+          "hint_value": "Neck stiffness (nuchal rigidity) is a cardinal sign of meningism \u2014 meningeal irritation from infection or blood"
+        },
+        {
+          "id": "h3",
+          "question": "Any rash anywhere on the body?",
+          "answer": "One of his roommates noticed some small reddish spots on his lower legs when they were helping him to the auto. They are still there.",
+          "yield": "high",
+          "hint_value": "Petechial/purpuric rash in meningitis = meningococcal septicaemia until proven otherwise \u2014 a medical emergency. Non-blanching rash on glass test."
+        },
+        {
+          "id": "h4",
+          "question": "Any similar illness in his hostel recently?",
+          "answer": "He thinks one student in another room had fever and headache last week and was admitted to hospital. He does not know the details.",
+          "yield": "medium",
+          "hint_value": "Cluster of cases in a hostel setting raises suspicion for meningococcal disease \u2014 contact tracing and prophylaxis may be required"
+        },
+        {
+          "id": "h5",
+          "question": "Any ear infection, sinusitis, or dental problem recently?",
+          "answer": "He had a mild cold about 10 days ago that resolved on its own. No ear pain, no dental issues.",
+          "yield": "medium",
+          "hint_value": "URTI preceding bacterial meningitis is a classic history \u2014 nasopharyngeal colonisation followed by haematogenous spread"
+        },
+        {
+          "id": "h6",
+          "question": "Any seizure or loss of consciousness?",
+          "answer": "No witnessed seizure. But his roommates say he was 'not making sense' for the last hour before they brought him in.",
+          "yield": "medium",
+          "hint_value": "Altered sensorium in meningitis indicates severe disease \u2014 GCS monitoring and urgent LP essential"
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Temperature",
+              "result": "39.4\u00b0C \u2014 high fever",
+              "yield": "high"
+            },
+            {
+              "id": "e2",
+              "name": "Heart Rate and BP",
+              "result": "HR 118 bpm. BP 108/70 mmHg \u2014 slightly low, possible sepsis.",
+              "yield": "high"
+            },
+            {
+              "id": "e3",
+              "name": "SpO2",
+              "result": "97% on room air",
+              "yield": "low"
+            }
+          ]
+        },
+        {
+          "region": "Neuro",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "GCS",
+              "result": "E3V4M5 = 12/15. Drowsy, oriented to name only.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Kernig's Sign",
+              "result": "Positive \u2014 unable to extend knee when hip is flexed to 90\u00b0, pain and resistance noted bilaterally.",
+              "yield": "high"
+            },
+            {
+              "id": "e6",
+              "name": "Brudzinski's Sign",
+              "result": "Positive \u2014 passive neck flexion causes involuntary flexion of both knees.",
+              "yield": "high"
+            },
+            {
+              "id": "e7",
+              "name": "Fundoscopy",
+              "result": "Disc margins slightly blurred bilaterally \u2014 early papilloedema cannot be excluded.",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Haematology and Inflammatory",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "CBC",
+              "value": "WBC 22.4 \u00d7 10\u2079/L (82% neutrophils), Hb 14.2, Platelets 88 \u00d7 10\u2079/L",
+              "normal_range": "WBC 4\u201311, Hb 13\u201317, Plt 150\u2013400",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "CRP",
+              "value": "148 mg/L",
+              "normal_range": "< 5 mg/L",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l3",
+              "name": "Procalcitonin",
+              "value": "18 ng/mL",
+              "normal_range": "< 0.5 ng/mL",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "panel": "Metabolic",
+          "tests": [
+            {
+              "id": "l4",
+              "name": "Serum Glucose",
+              "value": "92 mg/dL",
+              "normal_range": "70\u2013100 mg/dL fasting",
+              "flag": "normal",
+              "yield": "medium"
+            },
+            {
+              "id": "l5",
+              "name": "Serum Sodium",
+              "value": "128 mEq/L",
+              "normal_range": "135\u2013145 mEq/L",
+              "flag": "low",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "CSF Analysis (Lumbar Puncture)",
+          "tests": [
+            {
+              "id": "l6",
+              "name": "CSF Appearance",
+              "value": "Turbid / cloudy, opening pressure 28 cmH2O (elevated)",
+              "normal_range": "Clear, 8\u201320 cmH2O",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l7",
+              "name": "CSF WBC",
+              "value": "3800 cells/\u00b5L \u2014 94% neutrophils",
+              "normal_range": "< 5 cells/\u00b5L",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l8",
+              "name": "CSF Protein / Glucose",
+              "value": "Protein: 380 mg/dL (high). Glucose: 18 mg/dL. CSF:serum glucose ratio 0.19 (< 0.5 = bacterial)",
+              "normal_range": "Protein 15\u201345 mg/dL, Glucose 50\u201380 mg/dL, ratio > 0.6",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "CT",
+          "region": "Head",
+          "cost_points": 35,
+          "report": "No acute intracranial haemorrhage.\nNo space-occupying lesion.\nNo significant midline shift.\nVentricles: Normal size. No hydrocephalus at this stage.\nSulci: Mildly effaced suggesting cerebral oedema.\n\nImpression: No contraindication to lumbar puncture identified. No mass lesion or obstructive hydrocephalus. Clinical picture highly consistent with meningitis \u2014 proceed to LP.",
+          "yield": "medium"
+        },
+        {
+          "id": "i2",
+          "modality": "MRI",
+          "region": "Head",
+          "cost_points": 35,
+          "report": "Post-contrast T1: Diffuse leptomeningeal enhancement \u2014 bilateral, most prominent over convexities and basal cisterns.\nDWI: No acute infarction.\nNo cerebral abscess.\nNo empyema.\n\nImpression: Findings diagnostic of bacterial meningitis. Leptomeningeal enhancement pattern consistent with pyogenic aetiology.",
+          "yield": "high"
+        },
+        {
+          "id": "i3",
+          "modality": "X-Ray",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "Lung fields: Clear. No consolidation, no effusion.\nHeart size: Normal.\nNo evidence of pneumonia.\n\nImpression: Normal CXR. Pneumonia-associated bacteraemia not the source based on imaging \u2014 but does not exclude nasopharyngeal or other source.",
+          "yield": "low"
+        }
+      ],
+      "differential_decoys": [
+        "Viral meningitis",
+        "Subarachnoid haemorrhage",
+        "Severe migraine",
+        "Viral encephalitis"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h3"
+        ],
+        "exam_ids": [
+          "e1",
+          "e4",
+          "e5",
+          "e6"
+        ],
+        "lab_ids": [
+          "l1",
+          "l2",
+          "l6",
+          "l7",
+          "l8"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Classic triad of fever + severe headache + neck stiffness in a young hostel resident should trigger immediate empirical antibiotics \u2014 do not wait for LP results. CT head first only if there is papilloedema or focal neurology (to exclude raised ICP before LP). LP is the diagnostic gold standard \u2014 turbid CSF, neutrophilic pleocytosis, high protein, low glucose confirms bacterial meningitis. Blood cultures and IV Ceftriaxone must start within 30 minutes of presentation."
+      },
+      "debrief": {
+        "pathophysiology": "Bacteria (most commonly S. pneumoniae in adults) colonise the nasopharynx, invade the bloodstream, and cross the blood-brain barrier into the subarachnoid space. The inflammatory response \u2014 neutrophil infiltration, cytokine release, BBB breakdown \u2014 causes cerebral oedema, raised intracranial pressure, and vasculitis. CSF glucose falls as bacteria and leukocytes consume it; protein rises from BBB leakage.",
+        "classic_presentation": "Young adult with fever, severe headache (worst of life), neck stiffness, photophobia, and vomiting. Kernig's and Brudzinski's signs positive. Meningococcal disease may show petechial/purpuric rash \u2014 non-blanching on glass test.",
+        "key_discriminators": [
+          "Neutrophilic pleocytosis in CSF (> 1000 cells, > 80% neutrophils) = bacterial, not viral",
+          "CSF:serum glucose ratio < 0.5 is highly specific for bacterial meningitis",
+          "Non-blanching petechial rash = meningococcaemia \u2014 do not wait for anything, give IV Benzylpenicillin immediately",
+          "Subarachnoid haemorrhage: thunderclap onset, xanthochromia in CSF, blood not white cells"
+        ],
+        "common_mimics": [
+          "Viral meningitis \u2014 less severe, CSF shows lymphocytic pleocytosis (not neutrophilic), glucose normal, protein mildly elevated, self-limiting",
+          "Subarachnoid haemorrhage \u2014 thunderclap headache, CSF shows xanthochromia and RBCs, CT often diagnostic",
+          "Severe migraine \u2014 recurrent history, no fever, no meningism, responds to triptans, normal CSF"
+        ],
+        "treatment": "Do not delay antibiotics for imaging. If any delay in LP: start IV Ceftriaxone 2g every 12 hours + Dexamethasone 0.15 mg/kg every 6 hours (reduces neurological complications) immediately. After blood cultures, proceed to CT head. If CT clear, do LP. Add Ampicillin if Listeria suspected (immunocompromised, elderly). Monitor ICP, treat cerebral oedema with head elevation and Mannitol if needed. Rifampicin prophylaxis for close contacts in meningococcal disease.",
+        "clinical_pearl": "In suspected bacterial meningitis, do not delay antibiotics to get a CT or LP. Every hour of delay in antibiotic administration increases mortality by 30%. Give IV Ceftriaxone first, then investigate. If non-blanching rash is present, give IV Benzylpenicillin in casualty immediately \u2014 this is one of the few true 'seconds count' scenarios in medicine.",
+        "attendings_note": "The roommates said migraine and you almost wrote that diagnosis. But this man has never had a headache this severe, he has fever, and he cannot tolerate light. Migraine does not cause fever. Migraine does not cause neck stiffness. When I see a young person with the triad of fever, severe headache, and neck stiffness, I am giving antibiotics before I even order the CT \u2014 because if I am wrong I have given one dose of Ceftriaxone unnecessarily, but if I am right and I wait, I may be signing his death certificate.\n\nLook at those spots on his legs. Put a glass on them. Do they blanch? They do not. That is a non-blanching petechial rash \u2014 meningococcaemia. That is the most time-critical diagnosis in medicine. If you see that rash, give IV Benzylpenicillin before the patient leaves triage. Do not wait for results. Do not wait for the consultant. Give it.\n\nFor the LP \u2014 students are always afraid to do it, afraid of coning. Check the fundus, check for focal neurology, get the CT if there is any doubt. But once it is clear \u2014 do the LP. That CSF result is how we choose the right antibiotic and how we confirm the diagnosis. A clear LP indication should not wait until morning.",
+        "india_context": "S. pneumoniae is the leading cause of bacterial meningitis in Indian adults. Meningococcal meningitis occurs in clusters, especially in crowded hostel and barracks settings. Pneumococcal conjugate vaccine (PCV) is now part of the national immunisation schedule but coverage in the 22-year-old cohort is zero \u2014 this generation was not vaccinated. Chemoprophylaxis with Rifampicin or Ciprofloxacin for close contacts is recommended in meningococcal disease.",
+        "learning_tags": [
+          "premature_closure",
+          "migraine_misdiagnosis",
+          "bacterial_meningitis",
+          "csf_interpretation",
+          "kernig_brudzinski",
+          "meningococcaemia",
+          "antibiotic_before_imaging",
+          "non_blanching_rash"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same disease, different organism",
+          "teaser": "55M post-neurosurgery, fever, neck stiffness, CSF glucose very low",
+          "teaches": "Hospital-acquired meningitis \u2014 different organisms (Gram negatives, Staph) and different antibiotic choices"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "28F, thunderclap headache, vomiting, CT head normal, LP shows xanthochromia",
+          "teaches": "Subarachnoid haemorrhage \u2014 the other 'worst headache of my life' diagnosis"
+        },
+        {
+          "label": "Same chief complaint, different diagnosis",
+          "teaser": "19F, headache, vomiting, fever, CSF shows lymphocytic pleocytosis, glucose normal",
+          "teaches": "Viral meningitis \u2014 how CSF profile distinguishes it from bacterial and why treatment differs fundamentally"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "pulm_001",
+      "title": "Three Courses of Antibiotics",
+      "specialty": "Pulmonology",
+      "difficulty": "Resident",
+      "urgency": "medium",
+      "patient": {
+        "name": "Suresh Mistry",
+        "age": 28,
+        "gender": "M",
+        "occupation": "Daily wage construction labourer, migrant from Jharkhand, lives in Mumbai chawl"
+      },
+      "presentation": "Suresh Mistry, 28 years old, comes to the government hospital OPD. He has had a cough for 3 months that has not resolved despite being given three different courses of antibiotics by local practitioners \u2014 Amoxicillin, Azithromycin, and Co-trimoxazole in sequence. For the past 3 weeks the cough has been bringing up blood-streaked sputum. He has lost about 8kg over the last 2 months and his friends say he looks much thinner than before. He has been ignoring the illness because 'work cannot stop.'",
+      "correct_diagnosis": "Pulmonary Tuberculosis",
+      "diagnosis_aliases": [
+        "Pulmonary TB",
+        "TB",
+        "Tuberculosis",
+        "Koch's disease",
+        "Primary pulmonary TB",
+        "Post-primary TB",
+        "Cavitary TB",
+        "Phthisis",
+        "Rajyakshma",
+        "Kshaya rog"
+      ],
+      "india_context": "India has the highest TB burden globally \u2014 27% of all new TB cases worldwide. Migrants from high-prevalence states (Jharkhand, Bihar, UP, Chhattisgarh) living in dense urban settings like Mumbai chawls are at very high risk. Delayed diagnosis due to repeated antibiotic courses from private practitioners is one of the most common patterns seen in government hospitals. All TB cases must be notified to NIKSHAY portal under the National TB Elimination Programme (NTEP).",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "How long has the cough been going on, and has he had blood in the sputum?",
+          "answer": "Cough for 3 months. Blood-streaked sputum for the last 3 weeks. Not large amounts, but every morning there is some blood mixed with mucus.",
+          "yield": "high",
+          "hint_value": "Cough > 2 weeks + haemoptysis = TB screening mandatory in India. This is the WHO/NTEP definition of presumptive TB."
+        },
+        {
+          "id": "h2",
+          "question": "Any significant weight loss or loss of appetite?",
+          "answer": "Yes, he has lost 8kg in about 2 months. He says he has no appetite and feels weak all the time. His trousers are very loose now.",
+          "yield": "high",
+          "hint_value": "Constitutional symptoms \u2014 weight loss, anorexia, fatigue \u2014 are hallmarks of TB. Significant weight loss in a young man must be explained."
+        },
+        {
+          "id": "h3",
+          "question": "Any fever, especially in the evenings, and any night sweats?",
+          "answer": "He says he feels warm in the evenings but has not checked his temperature. His wife says his shirt is often wet when he wakes up \u2014 she washes it every day.",
+          "yield": "high",
+          "hint_value": "Evening low-grade fever + drenching night sweats = classic constitutional TB symptom triad with weight loss (B symptoms)"
+        },
+        {
+          "id": "h4",
+          "question": "Has anyone at home or at work had TB or a similar illness?",
+          "answer": "His chacha (uncle) in Jharkhand was treated for TB about 2 years ago. He lived with him for 6 months before coming to Mumbai.",
+          "yield": "high",
+          "hint_value": "Close contact with a TB case is a major risk factor \u2014 household exposure to smear-positive TB has 15\u201320% transmission risk"
+        },
+        {
+          "id": "h5",
+          "question": "Has he ever been tested or treated for TB before?",
+          "answer": "No, never. He says the local doctor just kept giving him different antibiotics and never sent him for any test.",
+          "yield": "medium",
+          "hint_value": "No prior TB treatment = new case. Important for NTEP categorisation and treatment regimen choice"
+        },
+        {
+          "id": "h6",
+          "question": "Any alcohol use or other illnesses like diabetes?",
+          "answer": "He drinks occasionally on weekends. No diabetes that he knows of. He has never had a blood test.",
+          "yield": "low",
+          "hint_value": "Alcohol and diabetes are risk factors for TB and treatment complications. Worth noting for baseline assessment."
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Temperature",
+              "result": "37.9\u00b0C \u2014 low-grade fever",
+              "yield": "medium"
+            },
+            {
+              "id": "e2",
+              "name": "Weight and BMI",
+              "result": "52kg, height 168cm. BMI 18.4 \u2014 underweight. Visibly cachectic.",
+              "yield": "high"
+            },
+            {
+              "id": "e3",
+              "name": "SpO2 and RR",
+              "result": "SpO2 94% on room air. RR 22/min \u2014 mildly elevated.",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "region": "Chest",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "Percussion",
+              "result": "Dullness on percussion over right upper zone and right infraclavicular area.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Auscultation",
+              "result": "Bronchial breathing in right upper zone. Post-tussive crepitations in right upper and middle zone. Amphoric breath sounds (cavity).",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Sputum Studies",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "Sputum AFB Smear (Ziehl-Neelsen)",
+              "value": "3+ positive \u2014 numerous acid-fast bacilli seen",
+              "normal_range": "Negative",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "CBNAAT / GeneXpert (Cartridge-Based NAAT)",
+              "value": "M. tuberculosis DETECTED. Rifampicin resistance: NOT DETECTED.",
+              "normal_range": "Not detected",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "panel": "Haematology and Metabolic",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "CBC",
+              "value": "WBC 11.2 \u00d7 10\u2079/L (lymphocytes 42%), Hb 9.8 g/dL (microcytic), Platelets 480 \u00d7 10\u2079/L",
+              "normal_range": "WBC 4\u201311, Hb 13\u201317, Plt 150\u2013400",
+              "flag": "low",
+              "yield": "medium"
+            },
+            {
+              "id": "l4",
+              "name": "ESR",
+              "value": "88 mm/hr",
+              "normal_range": "< 20 mm/hr in males",
+              "flag": "high",
+              "yield": "medium"
+            },
+            {
+              "id": "l5",
+              "name": "Random Blood Glucose",
+              "value": "98 mg/dL",
+              "normal_range": "< 140 mg/dL",
+              "flag": "normal",
+              "yield": "low"
+            }
+          ]
+        },
+        {
+          "panel": "HIV Serology",
+          "tests": [
+            {
+              "id": "l6",
+              "name": "HIV ELISA (Rapid Test)",
+              "value": "Non-reactive",
+              "normal_range": "Non-reactive",
+              "flag": "normal",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "X-Ray",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "Right upper lobe: Large heterogeneous opacity with central lucency \u2014 thick-walled cavity approximately 4cm diameter. Surrounding consolidation and satellite nodules. Fibrotic streaking toward hilum.\nLeft upper lobe: Small nodular opacity \u2014 possible contralateral seeding.\nNo pleural effusion.\nNo pneumothorax.\n\nImpression: Bilateral upper lobe disease with cavitation. Appearances highly consistent with active pulmonary tuberculosis. Recommend sputum AFB and CBNAAT.",
+          "yield": "high"
+        },
+        {
+          "id": "i2",
+          "modality": "CT",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "Right upper lobe: Thick-walled cavity (4.2 \u00d7 3.8 cm) with surrounding tree-in-bud pattern and centrilobular nodules extending into right middle lobe \u2014 active endobronchial spread.\nLeft upper lobe: Centrilobular nodules and ground-glass opacity \u2014 early disease.\nMediastinal lymphadenopathy: Right paratracheal and subcarinal nodes enlarged (largest 1.8cm), with low-density centre suggesting necrosis.\nNo pleural empyema.\n\nImpression: Active pulmonary tuberculosis with cavitation and endobronchial spread bilaterally. Mediastinal lymphadenopathy with central necrosis.",
+          "yield": "high"
+        },
+        {
+          "id": "i3",
+          "modality": "X-Ray",
+          "region": "Abdomen",
+          "cost_points": 35,
+          "report": "No calcified mesenteric or para-aortic lymph nodes identified.\nNo free air under diaphragm.\nBowel gas pattern unremarkable.\n\nImpression: No abdominal features of TB on plain film. CT abdomen would be required if extrapulmonary involvement suspected.",
+          "yield": "low"
+        }
+      ],
+      "differential_decoys": [
+        "Community-acquired pneumonia",
+        "Lung abscess",
+        "Fungal infection (Aspergillosis)",
+        "Lung cancer with cavitation"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h3",
+          "h4"
+        ],
+        "exam_ids": [
+          "e2",
+          "e4",
+          "e5"
+        ],
+        "lab_ids": [
+          "l1",
+          "l2",
+          "l6"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Cough > 2 weeks + haemoptysis + weight loss + night sweats + TB contact history in a migrant labourer = presumptive TB until proven otherwise. CXR is the first investigation \u2014 upper lobe cavitation is highly characteristic. Sputum AFB smear and CBNAAT confirms the diagnosis and rules out rifampicin resistance simultaneously. HIV test is mandatory in all TB cases. Do not delay starting NTEP treatment waiting for culture results."
+      },
+      "debrief": {
+        "pathophysiology": "Post-primary (reactivation) TB occurs when latent Mycobacterium tuberculosis reactivates in the upper lobes due to waning immunity, malnutrition, or new exposure. High oxygen tension in the upper lobes favours mycobacterial growth. Caseous necrosis liquefies and drains into a bronchus, forming a cavity. Cavitary TB is highly infectious \u2014 sputum contains millions of bacilli per mL. Haematogenous and endobronchial spread can seed other lung zones and distant organs.",
+        "classic_presentation": "Young adult from a high-prevalence area with cough > 2 weeks, haemoptysis, low-grade evening fever, drenching night sweats, and significant weight loss. Upper zone dullness and bronchial breathing. CXR shows upper lobe consolidation with cavitation.",
+        "key_discriminators": [
+          "Duration > 2 weeks + upper lobe involvement \u2014 pneumonia resolves faster, involves lower lobes more",
+          "Cavitation with surrounding consolidation and tree-in-bud pattern = active TB until proven otherwise",
+          "AFB smear and GeneXpert \u2014 direct confirmation, also tests for rifampicin resistance",
+          "TB contact history + migrant from high-prevalence state + overcrowded living = very high pre-test probability"
+        ],
+        "common_mimics": [
+          "Community-acquired pneumonia \u2014 acute onset, responds to antibiotics, lower lobe, no weight loss",
+          "Lung abscess \u2014 foul-smelling sputum, putrid odour, often secondary to aspiration, lower lobe, anaerobes",
+          "Lung carcinoma with cavitation \u2014 older patient, smoker, irregular thick-walled cavity, hilar mass, no fever"
+        ],
+        "treatment": "Notify immediately on NIKSHAY portal (mandatory under NTEP). Initiate Category 1 DOTS (Directly Observed Treatment Short course): 2HRZE/4HR. Intensive phase 2 months: Isoniazid (H) + Rifampicin (R) + Pyrazinamide (Z) + Ethambutol (E) daily. Continuation phase 4 months: Isoniazid + Rifampicin daily. Pyridoxine (B6) with Isoniazid to prevent neuropathy. Baseline LFTs, uric acid, visual acuity. Nutritional support and Nikshay Poshan Yojana (Rs 500/month food support).",
+        "clinical_pearl": "In India, any patient with cough > 2 weeks must be screened for TB \u2014 this is the NTEP definition of presumptive TB. GeneXpert (CBNAAT) is now available free at all government hospitals and simultaneously diagnoses TB and Rifampicin resistance in 2 hours. Never start empirical anti-TB treatment without microbiological confirmation \u2014 drug-resistant TB is a growing crisis and incorrect treatment creates resistance.",
+        "attendings_note": "Three courses of antibiotics over 3 months \u2014 and nobody thought to check for TB. This is the most common pattern I see, and it bothers me every time. In India, cough for more than 2 weeks is TB until the test proves otherwise. It is not 'recurrent chest infection.' It is not 'antibiotic-resistant bacteria.' It is TB until you have a negative sputum result. Every day of delay is another few hundred people this man has exposed in his chawl and at his construction site.\n\nCavitary TB is the most infectious form. When you see a cavity in the upper lobe of a young person from Bihar or Jharkhand or Odisha who has been coughing for months, you should be moving fast. GeneXpert is free at government hospitals and gives you the answer in 2 hours \u2014 use it. And test for HIV in every single TB patient without exception. HIV-TB coinfection changes everything about management.\n\nNIKSHAY notification is not optional \u2014 it is the law. And DOTS compliance matters. A patient who takes irregular treatment is more dangerous than one who never treated at all, because he will develop resistance. Make sure someone is watching him take those tablets.",
+        "india_context": "India contributes 27% of global TB incidence. The National TB Elimination Programme (NTEP) targets TB elimination by 2025. Key features: free diagnosis (sputum AFB, CBNAAT, culture), free treatment (DOTS), Nikshay Poshan Yojana (nutritional support), mandatory NIKSHAY notification. Drug-resistant TB (MDR-TB: resistant to H and R; XDR-TB: additionally resistant to fluoroquinolones and injectables) is a growing challenge \u2014 GeneXpert detects Rifampicin resistance as a proxy for MDR.",
+        "learning_tags": [
+          "delayed_diagnosis",
+          "tb_triad",
+          "cxr_cavitation",
+          "afb_smear",
+          "cbnaat_genexpert",
+          "ntep_dots",
+          "hiv_tb_coinfection",
+          "mandatory_notification",
+          "anchoring_bias_antibiotics"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same disease, different complication",
+          "teaser": "30M on TB treatment for 6 weeks, develops jaundice and nausea",
+          "teaches": "Anti-TB drug-induced hepatotoxicity \u2014 when to stop treatment and how to rechallenge"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "55M smoker, 4cm upper lobe cavity, weight loss, no fever, sputum AFB negative",
+          "teaches": "Cavitating lung carcinoma vs TB \u2014 features that differentiate them and why both must be excluded"
+        },
+        {
+          "label": "Same chief complaint, different diagnosis",
+          "teaser": "40M with haemoptysis and CXR showing upper lobe opacity, sputum grows Aspergillus",
+          "teaches": "Pulmonary aspergilloma in old TB cavity \u2014 a common Indian complication of healed TB"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "pulm_002",
+      "title": "Ten Days After Joy",
+      "specialty": "Pulmonology",
+      "difficulty": "Attending",
+      "urgency": "high",
+      "patient": {
+        "name": "Priya Mehta",
+        "age": 29,
+        "gender": "F",
+        "occupation": "Homemaker, 10 days post normal vaginal delivery"
+      },
+      "presentation": "Priya Mehta, 29 years old, is brought to casualty by her husband 10 days after delivering her first baby by normal vaginal delivery at a nursing home. Since yesterday she has been increasingly breathless and today she had sudden worsening with mild right-sided chest pain on breathing deeply. Her husband says she has been very anxious since the delivery and 'not sleeping well' \u2014 he thought this breathlessness was post-delivery anxiety or weakness. She has not had a fever. On examination she looks frightened, is tachypnoeic, and is holding her chest.",
+      "correct_diagnosis": "Pulmonary Embolism",
+      "diagnosis_aliases": [
+        "PE",
+        "Pulmonary thromboembolism",
+        "Pulmonary embolus",
+        "Deep vein thrombosis with PE",
+        "Venous thromboembolism",
+        "VTE",
+        "Post-partum PE"
+      ],
+      "india_context": "Pulmonary embolism is significantly underdiagnosed in India \u2014 post-partum PE is a leading cause of maternal mortality that is frequently misattributed to post-partum anaemia, cardiac disease, or anxiety. Virchow's triad (hypercoagulability, venous stasis, endothelial damage) is maximally activated in the post-partum period. D-dimer has limited utility post-partum as it is physiologically elevated, making clinical scoring (Wells score) and CTPA essential.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "Did she have any swelling or pain in one leg after delivery?",
+          "answer": "Yes \u2014 her husband mentions that her left calf has been swollen and tender for the past 3 days. They thought it was because she was lying down too much after delivery.",
+          "yield": "high",
+          "hint_value": "Left calf swelling and tenderness = DVT until proven otherwise. DVT + breathlessness = PE until proven otherwise. This is Virchow's triad in action."
+        },
+        {
+          "id": "h2",
+          "question": "How exactly does the chest pain feel? Does it change with breathing?",
+          "answer": "Sharp, stabbing pain on the right side. Worse when she takes a deep breath or coughs. Better when she breathes shallowly.",
+          "yield": "high",
+          "hint_value": "Pleuritic chest pain (worse on inspiration) = pleural irritation \u2014 seen in PE (pulmonary infarction) and pneumonia. In post-partum context with DVT, PE is the diagnosis."
+        },
+        {
+          "id": "h3",
+          "question": "Has she been moving around and active since delivery, or mostly in bed?",
+          "answer": "She had a difficult labour \u2014 18 hours \u2014 and has been mostly resting in bed since. She barely gets up even to feed the baby.",
+          "yield": "high",
+          "hint_value": "Prolonged immobility after delivery = venous stasis. Combined with post-partum hypercoagulability = DVT/PE risk maximised."
+        },
+        {
+          "id": "h4",
+          "question": "Any previous clot in the leg or lung, or family history of clotting problems?",
+          "answer": "No previous clots. But her mother had 'some problem with blood clotting' \u2014 she doesn't remember the details.",
+          "yield": "medium",
+          "hint_value": "Family history of thrombophilia raises suspicion \u2014 inherited thrombophilias (Factor V Leiden, Protein C/S deficiency) increase VTE risk"
+        },
+        {
+          "id": "h5",
+          "question": "Any fever or cough with coloured sputum?",
+          "answer": "No fever at all. Dry cough only, no coloured sputum.",
+          "yield": "medium",
+          "hint_value": "Absence of fever and productive cough makes pneumonia less likely \u2014 PE is typically afebrile or low-grade fever only"
+        },
+        {
+          "id": "h6",
+          "question": "Was she on any blood thinners or did anyone warn her about clot risk after delivery?",
+          "answer": "No one mentioned anything about blood clots. She was discharged from the nursing home the next day after delivery.",
+          "yield": "low",
+          "hint_value": "Early discharge without VTE prophylaxis after prolonged labour is a missed opportunity \u2014 a systems issue worth noting"
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Heart Rate and BP",
+              "result": "HR 118 bpm \u2014 tachycardic. BP 98/66 mmHg \u2014 borderline hypotensive.",
+              "yield": "high"
+            },
+            {
+              "id": "e2",
+              "name": "SpO2 and RR",
+              "result": "SpO2 89% on room air \u2014 critically low. RR 28/min \u2014 tachypnoeic.",
+              "yield": "high"
+            },
+            {
+              "id": "e3",
+              "name": "Temperature",
+              "result": "37.4\u00b0C \u2014 afebrile",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "region": "Extremities",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "Left Calf",
+              "result": "Left calf circumference 3cm greater than right. Tenderness on palpation of left calf. Homan's sign positive.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Chest Auscultation",
+              "result": "Decreased breath sounds right base. Pleural rub audible right lower zone. No wheeze.",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Coagulation and Thrombosis",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "D-Dimer",
+              "value": "3800 ng/mL FEU",
+              "normal_range": "< 500 ng/mL (note: physiologically elevated post-partum \u2014 not useful for exclusion)",
+              "flag": "critical",
+              "yield": "medium"
+            },
+            {
+              "id": "l2",
+              "name": "INR and APTT",
+              "value": "INR 1.0, APTT 28 sec \u2014 normal",
+              "normal_range": "INR 0.8\u20131.2, APTT 25\u201335 sec",
+              "flag": "normal",
+              "yield": "low"
+            }
+          ]
+        },
+        {
+          "panel": "Haematology and ABG",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "ABG",
+              "value": "pH 7.48, PaO2 54 mmHg, PaCO2 28 mmHg, HCO3 21 \u2014 type 1 respiratory failure with respiratory alkalosis",
+              "normal_range": "pH 7.35\u20137.45, PaO2 80\u2013100, PaCO2 35\u201345",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l4",
+              "name": "CBC",
+              "value": "WBC 11.8 \u00d7 10\u2079/L, Hb 9.2 g/dL (post-partum), Platelets 318 \u00d7 10\u2079/L",
+              "normal_range": "WBC 4\u201311, Hb 12\u201316, Plt 150\u2013400",
+              "flag": "low",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Cardiac Markers",
+          "tests": [
+            {
+              "id": "l5",
+              "name": "Troponin I",
+              "value": "0.18 ng/mL",
+              "normal_range": "< 0.04 ng/mL",
+              "flag": "high",
+              "yield": "high"
+            },
+            {
+              "id": "l6",
+              "name": "BNP",
+              "value": "320 pg/mL",
+              "normal_range": "< 100 pg/mL",
+              "flag": "high",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "CT",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "CTPA (CT Pulmonary Angiography):\nFilling defect in right main pulmonary artery extending into right lower lobe segmental and subsegmental arteries. Filling defect in left lower lobe segmental artery.\nRight lower lobe: Wedge-shaped peripheral opacity abutting pleura \u2014 pulmonary infarction.\nRight heart: Mildly dilated RV with septal flattening ('D-sign') \u2014 RV strain.\nNo pleural empyema. Small right pleural effusion.\n\nImpression: Bilateral pulmonary embolism with right heart strain. Pulmonary infarction right lower lobe.",
+          "yield": "high"
+        },
+        {
+          "id": "i2",
+          "modality": "ECG",
+          "region": "Cardiac",
+          "cost_points": 35,
+          "report": "Rate: 118 bpm. Rhythm: Sinus tachycardia.\nS1Q3T3 pattern: S wave in lead I, Q wave and T-wave inversion in lead III.\nNew right bundle branch block (RBBB).\nT-wave inversions V1\u2013V4.\n\nImpression: ECG changes consistent with acute right heart strain from pulmonary embolism. S1Q3T3 is present but not specific \u2014 sinus tachycardia alone is the most common ECG finding in PE.",
+          "yield": "medium"
+        },
+        {
+          "id": "i3",
+          "modality": "Ultrasound",
+          "region": "Left leg \u2014 venous doppler",
+          "cost_points": 35,
+          "report": "Left popliteal and femoral vein: Non-compressible. Echogenic thrombus within lumen. No flow on colour Doppler.\nRight leg veins: Compressible, normal flow.\n\nImpression: Left femoro-popliteal DVT confirmed. Findings consistent with DVT as the source of pulmonary embolism.",
+          "yield": "high"
+        }
+      ],
+      "differential_decoys": [
+        "Post-partum anaemia causing breathlessness",
+        "Post-partum cardiomyopathy",
+        "Pneumonia",
+        "Post-partum anxiety/panic attack"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h3"
+        ],
+        "exam_ids": [
+          "e1",
+          "e2",
+          "e4"
+        ],
+        "lab_ids": [
+          "l3",
+          "l5"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Post-partum breathlessness + pleuritic chest pain + unilateral calf swelling = PE until proven otherwise. Wells score likely \u2265 6 (high probability). In high clinical probability, go straight to CTPA \u2014 do not wait for D-dimer, which is useless post-partum as it is always elevated. ABG showing type 1 respiratory failure + respiratory alkalosis supports diagnosis. Troponin and BNP elevation indicates RV strain \u2014 risk stratification matters for treatment intensity. Start anticoagulation empirically if CTPA is delayed."
+      },
+      "debrief": {
+        "pathophysiology": "Pregnancy and the post-partum period cause all three components of Virchow's triad: hypercoagulability (increased clotting factors, decreased protein S), venous stasis (IVC compression by uterus, immobility), and endothelial injury (delivery trauma). DVT forms in deep leg veins and a fragment embolises to pulmonary vasculature. Obstruction of pulmonary arteries increases right ventricular afterload, causing RV strain, reduced LV preload, and potentially cardiovascular collapse in massive PE.",
+        "classic_presentation": "Post-partum woman with sudden pleuritic chest pain, breathlessness, tachycardia, hypoxia, and unilateral leg swelling. In sub-massive PE: tachycardia, hypoxia, RV strain on ECG/Echo. In massive PE: haemodynamic instability, syncope, cardiac arrest.",
+        "key_discriminators": [
+          "Post-partum period + immobility + leg swelling = DVT/PE triad, not anxiety",
+          "Pleuritic chest pain (worse on inspiration) + hypoxia + normal CXR = classic PE pattern",
+          "D-dimer is NOT useful post-partum \u2014 always elevated \u2014 use Wells score and proceed to CTPA",
+          "S1Q3T3 + sinus tachycardia + RBBB on ECG = right heart strain from PE"
+        ],
+        "common_mimics": [
+          "Post-partum cardiomyopathy \u2014 biventricular failure, cardiomegaly on CXR, low EF on Echo, bilateral oedema",
+          "Post-partum anxiety/panic \u2014 tachycardia and breathlessness, but SpO2 normal, no leg swelling, ABG shows respiratory alkalosis only",
+          "Pneumonia \u2014 fever, productive cough, focal consolidation on CXR, responds to antibiotics"
+        ],
+        "treatment": "Start anticoagulation immediately if clinical suspicion is high and no absolute contraindications. Low Molecular Weight Heparin (LMWH \u2014 Enoxaparin) is safe while breastfeeding. For haemodynamically stable PE: LMWH therapeutic dose, transition to Warfarin or DOAC at 6 weeks post-partum. For massive PE with haemodynamic compromise: systemic thrombolysis (Alteplase) if no surgical contraindication. Duration of anticoagulation: minimum 3\u20136 months, reassess thrombophilia workup at 3 months post-event.",
+        "clinical_pearl": "D-dimer is physiologically elevated in pregnancy and the post-partum period \u2014 a 'positive' D-dimer tells you nothing and a 'negative' D-dimer is very unusual. Never use D-dimer to rule out PE in post-partum patients. Use the modified Wells score: if \u2265 5 (high probability), go straight to CTPA. Post-partum PE is a leading cause of maternal mortality in India and it is almost entirely preventable with VTE risk assessment and LMWH prophylaxis at discharge.",
+        "attendings_note": "The husband said 'anxiety after delivery' and you nearly wrote that in the notes. I want you to remember this face forever \u2014 a 29-year-old mother, 10 days post-partum, with a baby at home. She nearly died because someone thought she was just anxious. Post-partum breathlessness is PE until proven otherwise. That is the rule. No exceptions.\n\nLook at her leg. Left calf 3cm bigger than the right. That is not post-partum oedema \u2014 post-partum oedema is bilateral. That is a DVT. DVT plus sudden breathlessness in a post-partum woman is a pulmonary embolism. The diagnosis was there in the history and examination \u2014 we did not need any test to make the decision to anticoagulate.\n\nAnd the D-dimer \u2014 I see junior doctors ordering D-dimer in post-partum women and then panicking when it comes back at 3000. Of course it is 3000. It is always elevated post-partum. It is useless. Use the Wells score. If it is high probability, go straight to CTPA. Start LMWH while you are waiting for the CT. Do not wait.",
+        "india_context": "Post-partum VTE is a major contributor to maternal mortality in India. Many nursing homes discharge patients within 24\u201348 hours without VTE risk assessment or LMWH prophylaxis. The WHO safe childbirth checklist includes VTE risk assessment, but compliance is patchy. LMWH (Enoxaparin, Clexane) is available in India but not routinely prescribed at discharge from low-resource settings. Thrombophilia screening (Protein C, S, Antithrombin III, Factor V Leiden) should be done at 3 months post-event.",
+        "learning_tags": [
+          "post_partum_emergency",
+          "virchow_triad",
+          "wells_score",
+          "ctpa",
+          "d_dimer_limitations",
+          "dvt_pe",
+          "right_heart_strain",
+          "s1q3t3",
+          "maternal_mortality",
+          "premature_closure_anxiety"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same disease, more severe",
+          "teaser": "35F post-caesarean, sudden collapse, BP 60/40, SpO2 78%, on resuscitation trolley",
+          "teaches": "Massive PE with haemodynamic compromise \u2014 when to thrombolyse and the decision framework"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "32F post-partum day 14, breathlessness, bilateral oedema, CXR shows cardiomegaly",
+          "teaches": "Peripartum cardiomyopathy \u2014 how it differs from PE and why Echo is the key investigation"
+        },
+        {
+          "label": "Same chief complaint, different setting",
+          "teaser": "65M bedridden after hip replacement surgery, sudden breathlessness, pleuritic chest pain",
+          "teaches": "Post-surgical PE \u2014 similar pathophysiology, different patient, same urgency"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "gastro_001",
+      "title": "The Wrong Suspect",
+      "specialty": "Gastroenterology",
+      "difficulty": "Resident",
+      "urgency": "high",
+      "patient": {
+        "name": "Harpreet Kaur",
+        "age": 45,
+        "gender": "F",
+        "occupation": "Secondary school teacher"
+      },
+      "presentation": "Harpreet Kaur, 45 years old, is brought to casualty with severe epigastric pain radiating to the back that started 6 hours ago after a heavy meal at a family wedding. The pain is constant, 9/10 in severity, and has not improved with antacids or Buscopan. She has vomited 4 times. She is overweight and the triage nurse has noted in the file: 'known occasional drinker \u2014 alcohol-related?' The patient herself insists she only had 2 small drinks at the wedding.",
+      "correct_diagnosis": "Acute Pancreatitis secondary to Gallstones",
+      "diagnosis_aliases": [
+        "Gallstone pancreatitis",
+        "Biliary pancreatitis",
+        "Acute pancreatitis",
+        "Gallstone-induced pancreatitis",
+        "Cholelithiasis with pancreatitis"
+      ],
+      "india_context": "Gallstone disease is the leading cause of acute pancreatitis in Indian women, particularly those who are obese, multiparous, and over 40 (the 4 F's: Fat, Female, Fertile, Forty). Alcohol is the dominant cause in men. The triage assumption of alcohol in a woman with pancreatitis is a common and harmful cognitive bias seen in Indian hospitals.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "Has she had similar episodes of pain before, especially after fatty meals?",
+          "answer": "Yes, actually \u2014 she has had three or four episodes over the past year of pain in the upper abdomen and right side after eating heavy food. They lasted a few hours and went away on their own. She never investigated them.",
+          "yield": "high",
+          "hint_value": "Recurrent right upper quadrant / epigastric pain after fatty meals = biliary colic from gallstones. This is the first attack severe enough to present to hospital."
+        },
+        {
+          "id": "h2",
+          "question": "Exactly how much alcohol has she had in the last 48 hours?",
+          "answer": "Two small glasses of wine at the wedding yesterday \u2014 that is all. She drinks maybe once or twice a month at most. No bingeing, no daily drinking.",
+          "yield": "high",
+          "hint_value": "Minimal alcohol intake makes alcoholic pancreatitis very unlikely \u2014 need to redirect investigation to gallstones as the cause"
+        },
+        {
+          "id": "h3",
+          "question": "Has she had any jaundice or yellow eyes recently?",
+          "answer": "Actually, yes \u2014 her husband noticed her eyes were slightly yellow about a week ago, for a day or two. It resolved on its own.",
+          "yield": "high",
+          "hint_value": "Transient jaundice followed by pancreatitis = gallstone passed through CBD, causing transient obstruction. Classic pattern of gallstone pancreatitis."
+        },
+        {
+          "id": "h4",
+          "question": "Any fever or chills?",
+          "answer": "Mild fever \u2014 38.1\u00b0C at triage. No rigors or chills.",
+          "yield": "medium",
+          "hint_value": "Mild fever is common in acute pancreatitis from inflammation. High fever + rigors would suggest ascending cholangitis (Charcot's triad)."
+        },
+        {
+          "id": "h5",
+          "question": "Any history of diabetes, high triglycerides, or calcium problems?",
+          "answer": "No diabetes. Not sure about triglycerides \u2014 never checked. No family history of calcium problems.",
+          "yield": "medium",
+          "hint_value": "Hypertriglyceridaemia and hypercalcaemia are other causes of pancreatitis \u2014 important to exclude if gallstones not found on USG"
+        },
+        {
+          "id": "h6",
+          "question": "Any medications \u2014 steroids, diuretics, or new medicines recently?",
+          "answer": "She takes Metformin for pre-diabetes. No steroids. No new medicines.",
+          "yield": "low",
+          "hint_value": "Drug-induced pancreatitis is rare but Metformin is not a known cause \u2014 low yield here but good practice to check medication history"
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Temperature and HR",
+              "result": "Temp 38.2\u00b0C. HR 108 bpm \u2014 tachycardic.",
+              "yield": "medium"
+            },
+            {
+              "id": "e2",
+              "name": "Blood Pressure",
+              "result": "104/68 mmHg \u2014 borderline low, likely hypovolaemia from vomiting.",
+              "yield": "high"
+            },
+            {
+              "id": "e3",
+              "name": "BMI",
+              "result": "BMI 31.4 \u2014 obese. Centripetal adiposity noted.",
+              "yield": "low"
+            }
+          ]
+        },
+        {
+          "region": "Abdomen",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "Tenderness",
+              "result": "Severe epigastric and right hypochondrial tenderness. Guarding present in epigastrium. No rebound tenderness. Murphy's sign borderline positive.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Flanks and Umbilicus",
+              "result": "No Grey Turner sign (flank bruising). No Cullen sign (periumbilical bruising). Bowel sounds reduced.",
+              "yield": "medium"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Pancreatic Enzymes",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "Serum Amylase",
+              "value": "1840 U/L",
+              "normal_range": "< 130 U/L",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "Serum Lipase",
+              "value": "3260 U/L",
+              "normal_range": "< 160 U/L",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "panel": "Liver Function Tests",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "ALT (SGPT)",
+              "value": "188 U/L",
+              "normal_range": "< 40 U/L",
+              "flag": "high",
+              "yield": "high"
+            },
+            {
+              "id": "l4",
+              "name": "Total Bilirubin",
+              "value": "2.8 mg/dL",
+              "normal_range": "0.2\u20131.0 mg/dL",
+              "flag": "high",
+              "yield": "high"
+            },
+            {
+              "id": "l5",
+              "name": "ALP (Alkaline Phosphatase)",
+              "value": "310 U/L",
+              "normal_range": "44\u2013147 U/L",
+              "flag": "high",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Metabolic and Haematology",
+          "tests": [
+            {
+              "id": "l6",
+              "name": "CBC",
+              "value": "WBC 16.4 \u00d7 10\u2079/L, Hb 13.8 g/dL, Haematocrit 44%",
+              "normal_range": "WBC 4\u201311, Hb 12\u201316",
+              "flag": "high",
+              "yield": "medium"
+            },
+            {
+              "id": "l7",
+              "name": "Serum Calcium",
+              "value": "8.9 mg/dL",
+              "normal_range": "8.5\u201310.5 mg/dL",
+              "flag": "normal",
+              "yield": "medium"
+            },
+            {
+              "id": "l8",
+              "name": "Serum Triglycerides",
+              "value": "148 mg/dL",
+              "normal_range": "< 150 mg/dL",
+              "flag": "normal",
+              "yield": "low"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "Ultrasound",
+          "region": "Abdomen",
+          "cost_points": 35,
+          "report": "Gallbladder: Multiple echogenic foci with posterior shadowing \u2014 cholelithiasis (multiple stones, largest 1.4cm). Gallbladder wall mildly thickened (4mm). Pericholecystic fluid \u2014 mild cholecystitis.\nCommon Bile Duct: 9mm (mildly dilated \u2014 normal < 6mm). No obvious CBD stone identified on USG (sensitivity for CBD stones only 30\u201350%).\nPancreas: Poorly visualised due to overlying bowel gas. Peripancreatic fat stranding noted where visible.\nNo free fluid in abdomen.\n\nImpression: Cholelithiasis with mild cholecystitis. CBD mildly dilated suggesting recent or ongoing stone passage. Pancreas poorly assessed \u2014 CECT abdomen recommended for complete pancreatitis evaluation.",
+          "yield": "high"
+        },
+        {
+          "id": "i2",
+          "modality": "CT",
+          "region": "Abdomen",
+          "cost_points": 35,
+          "report": "CECT Abdomen (Contrast-Enhanced CT):\nPancreas: Diffuse oedematous enlargement. Peripancreatic fat stranding. Peripancreatic fluid collection around head and body. No pancreatic necrosis (> 30% enhancement preserved).\nModified CT Severity Index (CTSI): Pancreatitis grade C + peripancreatic fluid = score 4 (moderate severity).\nGallbladder: Multiple gallstones. Mildly thickened wall. Small pericholecystic fluid.\nCBD: 9mm, no stone visualised.\nNo free intraperitoneal air. No abscess.\n\nImpression: Moderate acute pancreatitis (CTSI 4). No necrosis. Consistent with gallstone aetiology.",
+          "yield": "high"
+        },
+        {
+          "id": "i3",
+          "modality": "X-Ray",
+          "region": "Abdomen",
+          "cost_points": 35,
+          "report": "Sentinel loop sign: Localised ileus in epigastric region \u2014 mildly dilated jejunal loop adjacent to pancreatic region.\nNo free gas under diaphragm.\nNo radio-opaque gallstones (only 10\u201315% of gallstones are radio-opaque).\nNo obvious calcification in pancreatic region.\n\nImpression: Sentinel loop \u2014 supportive of pancreatic inflammation. Limited value in pancreatitis workup.",
+          "yield": "low"
+        }
+      ],
+      "differential_decoys": [
+        "Alcoholic pancreatitis",
+        "Peptic ulcer perforation",
+        "Acute cholecystitis",
+        "Mesenteric ischaemia"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h3"
+        ],
+        "exam_ids": [
+          "e2",
+          "e4"
+        ],
+        "lab_ids": [
+          "l1",
+          "l2",
+          "l3",
+          "l4"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Severe epigastric pain radiating to back + vomiting in an obese middle-aged woman after a fatty meal = gallstone pancreatitis until proven otherwise. Serum lipase > 3x upper limit confirms pancreatitis. Elevated ALT and bilirubin point toward biliary aetiology \u2014 ALT > 150 U/L has 85% PPV for gallstone pancreatitis. USG confirms gallstones. CECT abdomen (Balthazar scoring) needed if severe disease suspected. Do not assume alcohol without a robust history."
+      },
+      "debrief": {
+        "pathophysiology": "Gallstones passing through or impacting at the ampulla of Vater obstruct the pancreatic duct, causing backpressure and premature activation of pancreatic enzymes within the gland itself. Trypsinogen auto-activates to trypsin, triggering a cascade of enzyme activation causing acinar cell auto-digestion, inflammation, and oedema. In severe cases: necrosis, haemorrhage, and systemic inflammatory response syndrome (SIRS).",
+        "classic_presentation": "Obese middle-aged woman with sudden severe epigastric pain radiating straight through to the back, precipitated by a fatty meal. Vomiting prominent. Epigastric guarding. Serum lipase > 3\u00d7 normal. Gallstones on USG.",
+        "key_discriminators": [
+          "ALT > 150 U/L in pancreatitis = gallstone aetiology with 85% PPV \u2014 alcohol pancreatitis rarely raises ALT this much",
+          "Lipase more specific than amylase for pancreatitis \u2014 amylase can be elevated in many conditions",
+          "Transient jaundice preceding attack = classic gallstone pancreatitis pattern (CBD stone passed)",
+          "4 F's: Fat, Female, Forty, Fertile \u2014 classic demographic for gallstone disease"
+        ],
+        "common_mimics": [
+          "Peptic ulcer perforation \u2014 sudden severe pain, board-like rigidity, free air under diaphragm on erect CXR, amylase mildly elevated",
+          "Acute cholecystitis \u2014 RUQ pain, Murphy's sign positive, fever, but amylase not dramatically elevated",
+          "Mesenteric ischaemia \u2014 pain out of proportion to examination, older patient, AF or vascular disease, lactic acidosis"
+        ],
+        "treatment": "Aggressive IV fluids (Ringer's Lactate preferred over normal saline \u2014 reduces acidosis risk): 250\u2013500 mL/hr initially. Nil by mouth. Nasogastric tube if vomiting uncontrolled. IV analgesia \u2014 Tramadol or Morphine (morphine does not worsen pancreatitis despite old myths). Antibiotics only if infected necrosis suspected (not routine). ERCP + sphincterotomy if CBD stone confirmed or cholangitis suspected. Laparoscopic cholecystectomy before discharge (same admission if mild, within 6 weeks if moderate/severe) to prevent recurrence. Ranson/BISAP criteria for severity stratification.",
+        "clinical_pearl": "Serum lipase is more sensitive and specific for pancreatitis than amylase \u2014 many labs now only report lipase. An ALT > 150 U/L in acute pancreatitis should immediately shift your thinking to gallstones as the cause, not alcohol. This single finding has an 85% positive predictive value for gallstone pancreatitis. Do not miss this \u2014 it changes both the cause you document and whether ERCP is needed.",
+        "attendings_note": "The triage nurse wrote 'known occasional drinker' and suddenly everyone was thinking alcohol pancreatitis. This is a bias that harms patients \u2014 particularly women. The vast majority of pancreatitis in Indian women is from gallstones, not alcohol. And this patient told you clearly \u2014 two glasses of wine. That cannot cause pancreatitis.\n\nLook at the real story: she is 45, female, overweight, had three or four previous episodes of pain after fatty food that went away on their own. Those were biliary colic attacks \u2014 gallstones causing transient duct obstruction. And she had yellow eyes last week for a day. That was a stone passing through her bile duct, causing transient jaundice. Classic gallstone pancreatitis story. The alcohol note in the file almost derailed the whole workup.\n\nRemember the ALT. If the ALT is above 150 in pancreatitis, you should be thinking gallstones. Alcohol pancreatitis raises ALT a little \u2014 not to 188. That number alone should have told you the cause before the ultrasound. Use your labs intelligently.",
+        "india_context": "Gallstone disease in India predominantly affects the obese, multiparous woman over 40. Cholesterol gallstones are commoner in urban populations with high-fat diets; pigment stones (secondary to haemolytic anaemias like sickle cell, thalassaemia) are seen more in rural areas. The misconception that pancreatitis is always alcohol-related leads to gender bias in triage and missed biliary diagnoses. Early cholecystectomy in the same admission reduces readmission rates significantly.",
+        "learning_tags": [
+          "gender_bias",
+          "anchoring_bias_alcohol",
+          "gallstone_pancreatitis",
+          "alt_as_discriminator",
+          "bisap_ranson_scoring",
+          "lipase_vs_amylase",
+          "ercp_indication",
+          "biliary_colic_history"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same disease, more severe",
+          "teaser": "50M alcoholic, CECT shows 60% pancreatic necrosis, SIRS criteria met, ICU transfer",
+          "teaches": "Severe necrotising pancreatitis \u2014 Balthazar grading, BISAP score, ICU criteria, infected necrosis"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "60M sudden onset severe epigastric pain, board-like abdomen, erect CXR shows free air",
+          "teaches": "Perforated peptic ulcer \u2014 the surgical emergency that looks like pancreatitis but kills faster"
+        },
+        {
+          "label": "Same chief complaint, different diagnosis",
+          "teaser": "55F, RUQ pain after fatty food, fever 39\u00b0C, Murphy's sign strongly positive, no epigastric radiation",
+          "teaches": "Acute cholecystitis vs gallstone pancreatitis \u2014 how to distinguish clinically and which needs surgery urgently"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "gastro_002",
+      "title": "Yellow Eyes After Vacation",
+      "specialty": "Gastroenterology",
+      "difficulty": "Intern",
+      "urgency": "medium",
+      "patient": {
+        "name": "Karthik Subramaniam",
+        "age": 19,
+        "gender": "M",
+        "occupation": "First-year engineering college student, Tamil Nadu, recently returned from village home"
+      },
+      "presentation": "Karthik Subramaniam, 19 years old, is brought to college health centre by his hostel warden. He returned from his village home in Tirunelveli 10 days ago and has been unwell since. He has had low-grade fever, nausea, and complete loss of appetite for a week, and since yesterday his eyes have turned yellow. He is exhausted and barely eating. His roommates are worried because two other students who went home during the same break also came back unwell.",
+      "correct_diagnosis": "Hepatitis A",
+      "diagnosis_aliases": [
+        "Hep A",
+        "Hepatitis A virus",
+        "HAV infection",
+        "Infectious hepatitis",
+        "Epidemic jaundice",
+        "Viral hepatitis A"
+      ],
+      "india_context": "Hepatitis A is endemic in India and outbreaks are common in areas with poor sanitation and contaminated water supply. The classic Indian pattern is post-monsoon outbreaks in villages and urban slums with flooding. Young adults from semi-urban or rural areas who have not developed natural immunity are at particular risk. Cluster cases in a hostel after a break are a hallmark pattern of HAV.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "What did he eat and drink during his village visit?",
+          "answer": "He ate home food, street food from the local market, and drank water from the overhead tank. He also had fresh sugarcane juice from a street stall and ate cut fruit from a vendor.",
+          "yield": "high",
+          "hint_value": "Contaminated water and raw food from street vendors are the classic transmission routes for HAV. Sugarcane juice and cut fruit are high-risk vehicles."
+        },
+        {
+          "id": "h2",
+          "question": "Did anyone else at home or in the village fall ill around the same time?",
+          "answer": "Yes \u2014 two younger cousins in the village also had fever and jaundice. His mother said there were several cases of jaundice in the village last month after the rains.",
+          "yield": "high",
+          "hint_value": "Cluster of jaundice cases in a community after heavy rains and flooding = HAV outbreak pattern. Epidemiological link strongly supports diagnosis."
+        },
+        {
+          "id": "h3",
+          "question": "Describe the jaundice \u2014 when exactly did it start and is the urine dark?",
+          "answer": "Eyes turned yellow yesterday. Urine has been dark \u2014 tea-coloured \u2014 for 3 days. Stools have become pale/clay-coloured.",
+          "yield": "high",
+          "hint_value": "Dark urine (bilirubinuria) preceding jaundice + pale stools = obstructive jaundice pattern \u2014 but in HAV this is hepatocellular with intrahepatic cholestasis"
+        },
+        {
+          "id": "h4",
+          "question": "Any abdominal pain?",
+          "answer": "Yes \u2014 dull ache in the upper right side of his abdomen. Not severe, but uncomfortable, especially when he presses.",
+          "yield": "medium",
+          "hint_value": "Right hypochondrial discomfort = hepatomegaly with capsular stretch \u2014 liver is enlarged and tender"
+        },
+        {
+          "id": "h5",
+          "question": "Has he had jaundice before, or any liver problem?",
+          "answer": "No, never. This is the first time. He has never had any liver tests done.",
+          "yield": "medium",
+          "hint_value": "First episode in a teenager \u2014 HAV is the classic first viral hepatitis in young Indians who lack prior exposure"
+        },
+        {
+          "id": "h6",
+          "question": "Any injections, blood transfusions, tattoos, or sexual activity that could explain hepatitis?",
+          "answer": "No injections, no tattoos, no transfusions. He is not sexually active.",
+          "yield": "medium",
+          "hint_value": "Screens for parenterally transmitted hepatitis (B and C) \u2014 negative history makes HAV or HEV more likely, consistent with feco-oral route"
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Temperature",
+              "result": "37.7\u00b0C \u2014 low-grade fever. Pulse 88 bpm. BP 118/74 mmHg.",
+              "yield": "low"
+            },
+            {
+              "id": "e2",
+              "name": "General Appearance",
+              "result": "Icteric sclera bilaterally. Mild jaundice of skin. No pallor. No clubbing.",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "region": "Abdomen",
+          "findings": [
+            {
+              "id": "e3",
+              "name": "Liver",
+              "result": "Hepatomegaly \u2014 liver 3cm below right costal margin, tender on palpation. Smooth surface, no nodularity.",
+              "yield": "high"
+            },
+            {
+              "id": "e4",
+              "name": "Spleen and Ascites",
+              "result": "Spleen just palpable at left costal margin \u2014 mild splenomegaly. No ascites. No caput medusae.",
+              "yield": "medium"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Liver Function Tests",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "ALT (SGPT)",
+              "value": "1840 U/L",
+              "normal_range": "< 40 U/L",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "AST (SGOT)",
+              "value": "1420 U/L",
+              "normal_range": "< 40 U/L",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l3",
+              "name": "Total Bilirubin",
+              "value": "8.4 mg/dL (Direct: 6.2, Indirect: 2.2)",
+              "normal_range": "0.2\u20131.0 mg/dL",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l4",
+              "name": "ALP (Alkaline Phosphatase)",
+              "value": "280 U/L",
+              "normal_range": "44\u2013147 U/L",
+              "flag": "high",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Viral Serology",
+          "tests": [
+            {
+              "id": "l5",
+              "name": "Anti-HAV IgM",
+              "value": "POSITIVE",
+              "normal_range": "Negative",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l6",
+              "name": "HBsAg",
+              "value": "Negative",
+              "normal_range": "Negative",
+              "flag": "normal",
+              "yield": "medium"
+            },
+            {
+              "id": "l7",
+              "name": "Anti-HCV",
+              "value": "Negative",
+              "normal_range": "Negative",
+              "flag": "normal",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Coagulation and Haematology",
+          "tests": [
+            {
+              "id": "l8",
+              "name": "PT / INR",
+              "value": "INR 1.2",
+              "normal_range": "0.8\u20131.2",
+              "flag": "normal",
+              "yield": "high"
+            },
+            {
+              "id": "l9",
+              "name": "CBC",
+              "value": "WBC 5.8 \u00d7 10\u2079/L (lymphocyte predominant), Hb 14.1 g/dL, Platelets 188 \u00d7 10\u2079/L",
+              "normal_range": "WBC 4\u201311, Hb 13\u201317, Plt 150\u2013400",
+              "flag": "normal",
+              "yield": "low"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "Ultrasound",
+          "region": "Abdomen",
+          "cost_points": 35,
+          "report": "Liver: Mildly enlarged (span 16cm). Diffusely heterogeneous echotexture with periportal oedema \u2014 'starry sky' appearance. No focal lesion. No biliary dilatation.\nGallbladder: Wall mildly thickened (4mm). No gallstones.\nSpleen: Mildly enlarged (13cm).\nPortal vein: Normal calibre and flow.\nNo ascites.\n\nImpression: Hepatomegaly with periportal oedema and 'starry sky' pattern \u2014 consistent with acute viral hepatitis. No biliary obstruction (rules out obstructive jaundice).",
+          "yield": "medium"
+        },
+        {
+          "id": "i2",
+          "modality": "X-Ray",
+          "region": "Abdomen",
+          "cost_points": 35,
+          "report": "No free air under diaphragm.\nSoft tissue shadow in RUQ consistent with hepatomegaly.\nNo calcification.\n\nImpression: Limited utility in viral hepatitis \u2014 included only to exclude other abdominal pathology.",
+          "yield": "low"
+        },
+        {
+          "id": "i3",
+          "modality": "Ultrasound",
+          "region": "Abdomen \u2014 follow-up at 4 weeks",
+          "cost_points": 35,
+          "report": "Liver: Returned to normal size (span 14cm). Normal echotexture. Periportal oedema resolved.\nSpleen: Normal.\nNo ascites, no biliary dilatation.\n\nImpression: Complete sonographic resolution consistent with self-limiting acute hepatitis A. No chronic liver disease changes.",
+          "yield": "low"
+        }
+      ],
+      "differential_decoys": [
+        "Hepatitis E",
+        "Hepatitis B",
+        "Leptospirosis with jaundice",
+        "Drug-induced liver injury"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h3"
+        ],
+        "exam_ids": [
+          "e2",
+          "e3"
+        ],
+        "lab_ids": [
+          "l1",
+          "l2",
+          "l3",
+          "l5",
+          "l8"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Young person, post-travel, cluster of cases, contaminated food/water history \u2014 the pre-test probability for HAV is very high. LFTs confirm hepatocellular pattern (very high ALT/AST, elevated bilirubin). Anti-HAV IgM is the confirmatory test \u2014 positive = acute infection. INR is crucial to check \u2014 if prolonged, it signals hepatic failure risk. Ultrasound confirms hepatomegaly and rules out obstructive jaundice. HBsAg and anti-HCV rule out other viral hepatitis."
+      },
+      "debrief": {
+        "pathophysiology": "HAV is a non-enveloped RNA virus transmitted via the feco-oral route \u2014 contaminated food and water. It replicates in hepatocytes, causing immune-mediated cell damage rather than direct cytopathic effect. ALT/AST elevation reflects hepatocyte destruction. Conjugated bilirubin cannot be excreted normally \u2014 spills into urine (dark urine) and the gut receives less bile (pale stools). HAV almost never causes chronic liver disease \u2014 99.9% recover fully.",
+        "classic_presentation": "Young person from or returning from endemic area, low-grade fever and malaise for 1\u20132 weeks (prodromal phase), then jaundice with dark urine and pale stools, tender hepatomegaly. Cluster of similar cases in family or community. Self-limiting, recovers in 4\u20136 weeks.",
+        "key_discriminators": [
+          "Feco-oral transmission history (contaminated food/water) + cluster of cases = HAV or HEV",
+          "Anti-HAV IgM positive = current acute infection (Anti-HAV IgG = past infection/immunity)",
+          "ALT >> ALP ratio = hepatocellular pattern, not obstructive \u2014 USG shows no bile duct dilatation",
+          "Young patient, no parenteral risk factors, no sexual history = HAV most likely, not HBV/HCV"
+        ],
+        "common_mimics": [
+          "Hepatitis E \u2014 identical clinical picture, also feco-oral, also epidemic after flooding; differentiated by anti-HEV IgM; dangerous in pregnancy",
+          "Leptospirosis \u2014 also post-flooding, fever + jaundice + renal failure + conjunctival suffusion; Weil's disease; check anti-Leptospira MAT",
+          "Drug-induced liver injury \u2014 medication history essential; no epidemic pattern; no specific serology"
+        ],
+        "treatment": "Supportive \u2014 no specific antiviral. Rest, oral hydration, high-carbohydrate low-fat diet. Avoid alcohol completely for 6 months. Avoid hepatotoxic drugs (paracetamol, NSAIDs, statins). No isolation needed if standard hygiene maintained. Monitor INR \u2014 if rising, indicates acute liver failure risk and needs hospital admission. Discharge if eating and drinking adequately, INR < 1.5, no encephalopathy. Notify to health authorities for outbreak investigation. HAV vaccine for close contacts.",
+        "clinical_pearl": "INR is the most important monitoring parameter in acute viral hepatitis \u2014 it reflects hepatic synthetic function. A normal INR (as here) means the liver, though inflamed, is still synthesising clotting factors. If INR rises above 1.5, the patient needs hospitalisation and monitoring for acute liver failure. Never discharge a jaundiced patient without checking INR.",
+        "attendings_note": "This is a bread-and-butter case for Indian medicine \u2014 and yet students frequently overcomplicate it. Young man, just back from village, cluster of cases, contaminated water story, classic prodrome, now jaundice. This is hepatitis A until the blood test says otherwise. Order the Anti-HAV IgM and it will be positive.\n\nThe things I always check in viral hepatitis: the INR first, before anything else. If that INR is going up, I am admitting this patient immediately regardless of how well he looks. The liver can deteriorate very fast in fulminant hepatitis. This boy's INR is 1.2 and he is eating a little \u2014 he can go home with instructions.\n\nTwo other students from the same village trip also unwell \u2014 do not ignore that. That is a cluster. You need to inform the college medical officer and the district health authorities. This may be a local outbreak. Contact tracing and water testing may prevent 50 more cases.",
+        "india_context": "HAV is the most common cause of acute viral hepatitis in Indian children and young adults. Post-monsoon outbreaks are classic \u2014 flooding contaminates drinking water sources. Tirunelveli, like many districts in Tamil Nadu, has periodic HAV outbreaks linked to water supply contamination. The HAV vaccine is not part of the national immunisation programme in India but is recommended for travellers and high-risk groups. HEV (Hepatitis E) must always be considered in the differential, especially in pregnant women where it carries 20\u201325% mortality.",
+        "learning_tags": [
+          "hepatitis_a",
+          "fecal_oral_transmission",
+          "cluster_outbreak",
+          "inr_in_hepatitis",
+          "anti_hav_igm",
+          "hepatitis_differential",
+          "post_monsoon_jaundice",
+          "epidemic_hepatitis",
+          "availability_bias"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same presentation, higher risk",
+          "teaser": "28F, 32 weeks pregnant, jaundice post-flooding, anti-HEV IgM positive, worsening coagulopathy",
+          "teaches": "Hepatitis E in pregnancy \u2014 why it causes fulminant hepatic failure in pregnant women and carries 20% mortality"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "35M returning from rice fields during flood season, jaundice + fever + renal failure + conjunctival redness",
+          "teaches": "Leptospirosis with Weil's disease \u2014 how to distinguish from viral hepatitis using clinical features and specific serology"
+        },
+        {
+          "label": "Same age group, different route",
+          "teaser": "20M tattooed 4 months ago, insidious onset fatigue, HBsAg positive, HBeAg positive",
+          "teaches": "Acute Hepatitis B \u2014 parenteral transmission, higher chronicity risk than HAV, different serology interpretation"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "infect_001",
+      "title": "Fever From the Mines",
+      "specialty": "Infectious Disease",
+      "difficulty": "Resident",
+      "urgency": "high",
+      "patient": {
+        "name": "Ramkhelawan Yadav",
+        "age": 35,
+        "gender": "M",
+        "occupation": "Construction worker, recently returned from a 3-month project in Chhattisgarh"
+      },
+      "presentation": "Ramkhelawan Yadav, 35 years old, is brought to casualty by his brother at 11pm. He has had high-grade fever for 5 days, treated at a local clinic with 'fever tablets' (Crocin and some antibiotics). Today his brother noticed he was behaving strangely \u2014 he could not recognise family members and was speaking incoherently. He is now barely responding. His brother mentions he has been working near forest areas in Chhattisgarh for 3 months.",
+      "correct_diagnosis": "Cerebral Malaria",
+      "diagnosis_aliases": [
+        "Cerebral malaria",
+        "Falciparum malaria with cerebral involvement",
+        "P. falciparum malaria",
+        "Severe malaria",
+        "Complicated malaria",
+        "Plasmodium falciparum cerebral malaria"
+      ],
+      "india_context": "Chhattisgarh, Odisha, Jharkhand, and Madhya Pradesh account for over 40% of all malaria cases in India and nearly all deaths. Plasmodium falciparum dominates in forest and tribal regions. Migrant construction workers are at very high risk due to forest exposure, poor preventive measures, and delayed access to diagnosis. Cerebral malaria is defined by unarousable coma with P. falciparum parasitaemia and no other cause of coma.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "Exactly where in Chhattisgarh was he working and was there any jungle or forest nearby?",
+          "answer": "He was working at a mining construction site near Bastar district \u2014 surrounded by forest. He slept in a makeshift camp without mosquito nets.",
+          "yield": "high",
+          "hint_value": "Bastar district is one of the highest falciparum malaria endemic zones in India. Forest sleeping without nets = very high transmission risk."
+        },
+        {
+          "id": "h2",
+          "question": "How has the fever been \u2014 continuous, or coming in episodes?",
+          "answer": "Initially high fever every day, then it seemed to come in cycles of 48\u201372 hours with shivering and then sweating. But for the last 2 days it has been continuous and very high.",
+          "yield": "high",
+          "hint_value": "Tertian/quartan periodicity is classic for P. vivax/malariae. Continuous high fever in falciparum = non-specific or cerebral involvement \u2014 falciparum rarely shows textbook periodicity"
+        },
+        {
+          "id": "h3",
+          "question": "Any other symptoms alongside the fever \u2014 dark urine, jaundice, decreased urination?",
+          "answer": "His brother says he noticed his urine was very dark, almost black, 2 days ago. His eyes look a bit yellow. He is not urinating much today.",
+          "yield": "high",
+          "hint_value": "Dark urine + jaundice + oliguria in falciparum = haemolysis + haemoglobinuria (blackwater fever) + early renal failure \u2014 severe malaria criteria met"
+        },
+        {
+          "id": "h4",
+          "question": "Was he taking any anti-malarial tablets prophylactically or was he treated for malaria at the site?",
+          "answer": "No prophylaxis at all. He was given some tablets by the local compounder at the site last week \u2014 he does not know what they were. He improved briefly then worsened.",
+          "yield": "high",
+          "hint_value": "Partial or suboptimal treatment (likely chloroquine for falciparum in a resistant area) allows parasitaemia to continue and facilitates progression to cerebral malaria"
+        },
+        {
+          "id": "h5",
+          "question": "Has he had any seizures or fits at home?",
+          "answer": "Yes \u2014 his brother says he had two convulsions yesterday. Each lasted about 2\u20133 minutes. He was confused after each one.",
+          "yield": "high",
+          "hint_value": "Seizures in a febrile patient from malaria-endemic area = cerebral malaria until proven otherwise. Generalised convulsions are a WHO criterion for severe malaria."
+        },
+        {
+          "id": "h6",
+          "question": "Any known diabetes or hypertension?",
+          "answer": "No known illnesses. He has never been to a hospital before this year.",
+          "yield": "low",
+          "hint_value": "Low yield \u2014 no comorbidities to confound the picture. Noted as baseline."
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Temperature and HR",
+              "result": "Temp 40.1\u00b0C \u2014 high fever. HR 122 bpm \u2014 tachycardic.",
+              "yield": "medium"
+            },
+            {
+              "id": "e2",
+              "name": "Blood Pressure and SpO2",
+              "result": "BP 90/60 mmHg \u2014 borderline hypotensive. SpO2 94% on room air.",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "region": "Neuro",
+          "findings": [
+            {
+              "id": "e3",
+              "name": "GCS",
+              "result": "E2V2M4 = 8/15 \u2014 unarousable coma. Moans to pain only.",
+              "yield": "high"
+            },
+            {
+              "id": "e4",
+              "name": "Pupils and Fundi",
+              "result": "Pupils equal and reactive 3mm bilaterally. Fundoscopy: Retinal whitening with macular pallor \u2014 malarial retinopathy. Papilloedema absent.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Neck stiffness",
+              "result": "Mild neck stiffness \u2014 but Kernig's sign negative. No photophobia noted. Likely postictal or cerebral oedema rather than meningeal irritation.",
+              "yield": "medium"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Malaria Diagnostics",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "Rapid Diagnostic Test (RDT) for Malaria",
+              "value": "P. falciparum antigen (HRP-2): POSITIVE. P. vivax antigen: Negative.",
+              "normal_range": "Negative",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "Peripheral Blood Smear (Thick and Thin)",
+              "value": "Thick smear: Numerous ring trophozoites of P. falciparum. Multiple parasites per RBC. Parasitaemia 8.2% (severe if > 2%). No gametocytes.",
+              "normal_range": "No parasites seen",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "panel": "Haematology and Metabolic",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "CBC",
+              "value": "WBC 5.2 \u00d7 10\u2079/L, Hb 7.1 g/dL (severe anaemia), Platelets 28 \u00d7 10\u2079/L (severe thrombocytopaenia)",
+              "normal_range": "WBC 4\u201311, Hb 13\u201317, Plt 150\u2013400",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l4",
+              "name": "Serum Bilirubin and LFTs",
+              "value": "Total bilirubin 6.8 mg/dL (indirect-predominant: 5.2 mg/dL). ALT 88 U/L (mildly elevated).",
+              "normal_range": "Bilirubin < 1.0, ALT < 40",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l5",
+              "name": "Serum Creatinine and Urea",
+              "value": "Creatinine 3.8 mg/dL. Blood urea 88 mg/dL \u2014 acute kidney injury.",
+              "normal_range": "Creatinine 0.7\u20131.2, Urea 15\u201345 mg/dL",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "panel": "Glucose and Blood Gas",
+          "tests": [
+            {
+              "id": "l6",
+              "name": "Random Blood Glucose (Glucometer)",
+              "value": "48 mg/dL \u2014 hypoglycaemia",
+              "normal_range": "70\u2013140 mg/dL",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l7",
+              "name": "Lactate",
+              "value": "6.2 mmol/L",
+              "normal_range": "< 2.0 mmol/L",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "CT",
+          "region": "Head",
+          "cost_points": 35,
+          "report": "No intracranial haemorrhage.\nNo space-occupying lesion.\nCerebral oedema: Mild diffuse cerebral oedema with effacement of sulci. No midline shift.\nVentricles: Normal calibre \u2014 no hydrocephalus.\n\nImpression: Mild diffuse cerebral oedema. No structural lesion or haemorrhage. Findings consistent with cerebral malaria. Does not preclude lumbar puncture to exclude concurrent bacterial meningitis.",
+          "yield": "medium"
+        },
+        {
+          "id": "i2",
+          "modality": "Ultrasound",
+          "region": "Abdomen",
+          "cost_points": 35,
+          "report": "Spleen: Markedly enlarged \u2014 splenomegaly (span 19cm). Homogeneous echotexture. No splenic infarct.\nLiver: Mildly enlarged. Slightly heterogeneous.\nKidneys: Mildly enlarged, increased cortical echogenicity \u2014 consistent with acute kidney injury.\nBladder: Small volume \u2014 oliguria confirmed.\nNo free fluid.\n\nImpression: Massive splenomegaly consistent with malaria. Renal changes consistent with AKI.",
+          "yield": "medium"
+        },
+        {
+          "id": "i3",
+          "modality": "X-Ray",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "Bilateral perihilar haze \u2014 early pulmonary oedema/ARDS.\nHeart size normal.\nNo focal consolidation.\n\nImpression: Early ARDS pattern in context of severe malaria \u2014 pulmonary oedema is a WHO criterion for severe malaria.",
+          "yield": "medium"
+        }
+      ],
+      "differential_decoys": [
+        "Viral encephalitis",
+        "Bacterial meningitis",
+        "Typhoid encephalopathy",
+        "Alcohol intoxication"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h3",
+          "h5"
+        ],
+        "exam_ids": [
+          "e2",
+          "e3",
+          "e4"
+        ],
+        "lab_ids": [
+          "l1",
+          "l2",
+          "l6",
+          "l3",
+          "l5"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Fever + altered sensorium from a forest/tribal malaria zone = cerebral malaria until the smear says otherwise. First move: glucometer \u2014 hypoglycaemia is both a mimic AND a complication of severe malaria. Then RDT for immediate confirmation, followed by thick/thin smear for parasitaemia quantification. IV Artesunate should not wait for CT \u2014 treat empirically if smear/RDT confirms falciparum. CT head to exclude structural cause before LP if meningitis cannot be ruled out clinically."
+      },
+      "debrief": {
+        "pathophysiology": "P. falciparum has unique ability to cause infected RBCs to cytoadhere to cerebral microvascular endothelium (via PfEMP-1 adhesin), causing mechanical obstruction and sequestration. Combined with endothelial activation, cytokine storm, and ischaemia, this causes cerebral oedema and neuronal dysfunction. Falciparum also sequesters in the placenta (dangerous in pregnancy) and can infect multiple RBCs per cell (double or triple ring forms). Hypoglycaemia occurs from high parasite glucose consumption AND quinine/artesunate stimulating insulin release.",
+        "classic_presentation": "Fever + progressive altered sensorium + seizures in a migrant worker or traveller from a forest/tribal malaria-endemic zone. Severe anaemia, thrombocytopaenia, indirect hyperbilirubinaemia. Positive RDT and thick smear with high parasitaemia. Dark/black urine (haemoglobinuria in blackwater fever).",
+        "key_discriminators": [
+          "Malaria zone history + fever + coma \u2014 do smear and RDT before any other workup",
+          "Indirect bilirubinaemia (haemolytic) + severe anaemia + thrombocytopaenia = haematological signature of falciparum",
+          "Multiple ring forms per RBC + 'appliqu\u00e9' position + banana-shaped gametocytes = P. falciparum on smear",
+          "Hypoglycaemia in falciparum is both a cause and effect \u2014 check glucometer immediately"
+        ],
+        "common_mimics": [
+          "Bacterial meningitis \u2014 fever + altered sensorium + neck stiffness; CSF differentiates (neutrophilic pleocytosis vs clear); both can coexist",
+          "Viral encephalitis (JE) \u2014 endemic in same zones; mosquito-borne; fever + seizures + coma; smear negative; CSF lymphocytic",
+          "Typhoid encephalopathy \u2014 high Widal or blood culture; no parasitaemia; rose spots; relative bradycardia"
+        ],
+        "treatment": "IV Artesunate is the treatment of choice for severe malaria \u2014 superior to quinine in all trials. Dose: 2.4 mg/kg IV at 0, 12, 24 hours, then once daily for 7 days. Switch to oral Artemether-Lumefantrine (Coartem/Falcigo) when patient can swallow. Correct hypoglycaemia immediately: 25% dextrose IV 50mL bolus. Blood transfusion if Hb < 7 g/dL. Manage AKI (fluid balance, dialysis if needed). Do NOT give steroids \u2014 increase mortality in cerebral malaria. Monitor blood glucose every 4 hours (artesunate also causes hypoglycaemia). Nurse in dark room, manage seizures with IV diazepam.",
+        "clinical_pearl": "In any febrile patient with altered sensorium from a malaria-endemic area, do the glucometer first \u2014 takes 30 seconds and hypoglycaemia can mimic coma exactly. Then do RDT immediately. Never say 'we'll wait for the smear result' before initiating treatment in a comatose malaria patient \u2014 treat with IV Artesunate the moment RDT is positive.",
+        "attendings_note": "He came from Bastar. I saw that on the triage sheet and I told the resident \u2014 do malaria RDT now, before anything else. Forest zone + fever + confusion = falciparum malaria until I am proven wrong. We do not wait for CT, we do not wait for blood culture, we do not start empirical antibiotics for meningitis while we are waiting for the smear. The glucometer first, then the RDT, then Artesunate.\n\nThis man has all the features of severe malaria: coma, seizures, Hb 7, platelets 28, creatinine 3.8, bilirubin 6.8, glucose 48, lactate 6. By WHO criteria he has cerebral malaria, severe anaemia, AKI, hypoglycaemia, and lactic acidosis \u2014 that is five criteria for severe disease. The mortality in cerebral malaria without treatment within a few hours is very high.\n\nDo not give steroids. I know it is tempting in a comatose patient with cerebral oedema \u2014 but studies showed steroids increase mortality in cerebral malaria. And do not give chloroquine \u2014 most falciparum in India is chloroquine resistant. Artesunate only.",
+        "india_context": "India's malaria burden is concentrated in 5 high-burden states: Chhattisgarh, Jharkhand, Odisha, Madhya Pradesh, and West Bengal. P. falciparum dominates in these forested zones and has widespread chloroquine resistance. Migrant construction workers moving from these states to cities are the primary vector for introducing malaria to urban centres. Under the National Vector Borne Disease Control Programme (NVBDCP), Rapid Diagnostic Tests and IV Artesunate are available free at government hospitals.",
+        "learning_tags": [
+          "cerebral_malaria",
+          "falciparum",
+          "hypoglycaemia_first",
+          "rdt_malaria",
+          "peripheral_smear",
+          "artesunate",
+          "who_severe_malaria_criteria",
+          "no_steroids_malaria",
+          "endemic_zone_history",
+          "premature_closure_encephalitis"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same disease, different complication",
+          "teaser": "28F, 7 months pregnant, fever + jaundice + pulmonary oedema, smear positive P. falciparum",
+          "teaches": "Malaria in pregnancy \u2014 why it is more dangerous, preferential placental sequestration, and treatment differences"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "14M, Uttar Pradesh, fever + seizures + coma, smear negative, CSF shows lymphocytes and low glucose",
+          "teaches": "Japanese Encephalitis \u2014 same endemic belt, same presentation, differentiated by serology and negative malaria smear"
+        },
+        {
+          "label": "Same chief complaint, different Plasmodium",
+          "teaser": "32M returning from Rajasthan, cyclic fever every 48 hours, chills, sweating, anaemia, smear positive P. vivax",
+          "teaches": "P. vivax malaria \u2014 benign vs falciparum differences, chloroquine-sensitive, need for primaquine to clear hypnozoites"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    },
+    {
+      "id": "infect_002",
+      "title": "More Than Just a Viral Fever",
+      "specialty": "Infectious Disease",
+      "difficulty": "Resident",
+      "urgency": "high",
+      "patient": {
+        "name": "Siddharth Rajan",
+        "age": 16,
+        "gender": "M",
+        "occupation": "Class 11 student, Chennai, monsoon season (October)"
+      },
+      "presentation": "Siddharth Rajan, 16 years old, is brought by his mother to a private hospital in Chennai. He has had high fever for 5 days \u2014 his local paediatrician started him on antibiotics for 'viral fever with possible typhoid' 3 days ago. Today his mother is very worried: the fever has reduced slightly but he has severe abdominal pain, has vomited twice, and she noticed small reddish spots appearing on his forearms. He looks pale and unwell.",
+      "correct_diagnosis": "Dengue Haemorrhagic Fever",
+      "diagnosis_aliases": [
+        "DHF",
+        "Dengue haemorrhagic fever",
+        "Dengue with warning signs",
+        "Severe dengue",
+        "Dengue fever with thrombocytopaenia",
+        "Dengue shock syndrome",
+        "Break-bone fever"
+      ],
+      "india_context": "India reports approximately 200,000 dengue cases annually (significant under-reporting). Tamil Nadu, particularly Chennai, is hyperendemic with year-round transmission peaking October\u2013November. Dengue is a notifiable disease under the National Vector Borne Disease Control Programme. The most dangerous mistake is discharging a dengue patient without recognising warning signs \u2014 which include abdominal pain, persistent vomiting, rapid breathing, bleeding, and lethargy.",
+      "history_cards": [
+        {
+          "id": "h1",
+          "question": "Describe the fever pattern over 5 days and how he looks today compared to day 1.",
+          "answer": "First 2\u20133 days: very high fever (39.5\u201340\u00b0C), severe headache, body ache. Day 4: fever came down slightly \u2014 family thought he was recovering. Day 5 today: still feverish, but now abdominal pain, vomiting, and he is more lethargic than before.",
+          "yield": "high",
+          "hint_value": "The classic dengue 'saddleback' fever pattern: high fever days 1\u20133, brief defervescence, then deterioration on day 4\u20135 with warning signs. This is the most dangerous phase \u2014 when leaking starts."
+        },
+        {
+          "id": "h2",
+          "question": "Any bleeding \u2014 from the nose, gums, or elsewhere?",
+          "answer": "He had a small nosebleed yesterday that stopped on its own. His mother noticed he is bruising easily \u2014 she bumped his arm lightly and it left a big bruise.",
+          "yield": "high",
+          "hint_value": "Mucosal bleeding + easy bruising = thrombocytopaenia-related bleeding \u2014 warning sign of progression to DHF"
+        },
+        {
+          "id": "h3",
+          "question": "Any other cases of dengue in the neighbourhood or school recently?",
+          "answer": "Yes \u2014 three of his classmates had dengue in the past month. The area had waterlogging after heavy rains. There is a construction site nearby with stagnant water.",
+          "yield": "high",
+          "hint_value": "Cluster of Aedes aegypti-transmitted dengue in a waterlogged urban area during monsoon is a classic epidemiological picture"
+        },
+        {
+          "id": "h4",
+          "question": "Has anyone given him aspirin or ibuprofen for the fever?",
+          "answer": "The local doctor initially gave him Combiflam (ibuprofen + paracetamol). He took it for 2 days before coming here.",
+          "yield": "high",
+          "hint_value": "NSAIDs in dengue are dangerous \u2014 ibuprofen and aspirin inhibit platelet function and can precipitate serious bleeding. Only paracetamol is safe in dengue."
+        },
+        {
+          "id": "h5",
+          "question": "Any difficulty breathing or chest pain?",
+          "answer": "No chest pain. But his breathing seems a bit faster than usual to his mother. He has not measured it.",
+          "yield": "medium",
+          "hint_value": "Increased respiratory rate can indicate pleural effusion or pulmonary oedema from plasma leakage \u2014 an important examination finding to elicit"
+        },
+        {
+          "id": "h6",
+          "question": "What is his urine output like over the past 24 hours?",
+          "answer": "His mother is not sure \u2014 he has not been going to the bathroom much today. Maybe twice since morning.",
+          "yield": "medium",
+          "hint_value": "Reduced urine output = decreased perfusion from plasma leakage / early dengue shock. Monitor fluid status carefully."
+        }
+      ],
+      "exam_regions": [
+        {
+          "region": "Vitals",
+          "findings": [
+            {
+              "id": "e1",
+              "name": "Heart Rate and BP",
+              "result": "HR 108 bpm. BP 102/80 mmHg. Pulse pressure NARROW: 22 mmHg (normal > 40 mmHg) \u2014 early shock indicator.",
+              "yield": "high"
+            },
+            {
+              "id": "e2",
+              "name": "Temperature and SpO2",
+              "result": "Temp 38.3\u00b0C. SpO2 96% on room air. RR 22/min.",
+              "yield": "medium"
+            },
+            {
+              "id": "e3",
+              "name": "Capillary Refill and Skin",
+              "result": "Capillary refill 3 seconds (prolonged). Skin cool and clammy peripherally.",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "region": "Abdomen",
+          "findings": [
+            {
+              "id": "e4",
+              "name": "Tenderness",
+              "result": "Diffuse abdominal tenderness, maximum in epigastrium and right hypochondrium. No guarding or rigidity.",
+              "yield": "high"
+            },
+            {
+              "id": "e5",
+              "name": "Tourniquet Test",
+              "result": "Positive: > 20 petechiae per square inch after 5 minutes BP cuff inflation at mean arterial pressure.",
+              "yield": "high"
+            }
+          ]
+        }
+      ],
+      "lab_panels": [
+        {
+          "panel": "Dengue Serology",
+          "tests": [
+            {
+              "id": "l1",
+              "name": "NS1 Antigen",
+              "value": "POSITIVE",
+              "normal_range": "Negative",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l2",
+              "name": "Dengue IgM / IgG",
+              "value": "IgM: Positive (recent infection). IgG: Positive (secondary infection \u2014 higher DHF risk).",
+              "normal_range": "Negative",
+              "flag": "critical",
+              "yield": "high"
+            }
+          ]
+        },
+        {
+          "panel": "Haematology \u2014 Serial Monitoring",
+          "tests": [
+            {
+              "id": "l3",
+              "name": "Platelet Count",
+              "value": "32 \u00d7 10\u2079/L \u2014 severely low. (Day 1: 140. Day 3: 88. Day 5: 32 \u2014 rapidly falling.)",
+              "normal_range": "150\u2013400 \u00d7 10\u2079/L",
+              "flag": "critical",
+              "yield": "high"
+            },
+            {
+              "id": "l4",
+              "name": "Haematocrit (PCV)",
+              "value": "52% \u2014 rising from baseline. (Baseline estimated at 42\u201344%.)",
+              "normal_range": "40\u201354% in males",
+              "flag": "high",
+              "yield": "high"
+            },
+            {
+              "id": "l5",
+              "name": "WBC",
+              "value": "3.2 \u00d7 10\u2079/L \u2014 leucopaenia",
+              "normal_range": "4\u201311 \u00d7 10\u2079/L",
+              "flag": "low",
+              "yield": "medium"
+            }
+          ]
+        },
+        {
+          "panel": "Metabolic",
+          "tests": [
+            {
+              "id": "l6",
+              "name": "Serum Albumin",
+              "value": "2.8 g/dL",
+              "normal_range": "3.5\u20135.0 g/dL",
+              "flag": "low",
+              "yield": "high"
+            },
+            {
+              "id": "l7",
+              "name": "Liver enzymes",
+              "value": "AST: 188 U/L, ALT: 142 U/L \u2014 mildly elevated (dengue hepatitis)",
+              "normal_range": "AST/ALT < 40 U/L",
+              "flag": "high",
+              "yield": "medium"
+            }
+          ]
+        }
+      ],
+      "imaging_options": [
+        {
+          "id": "i1",
+          "modality": "Ultrasound",
+          "region": "Abdomen and Chest",
+          "cost_points": 35,
+          "report": "Pleural effusion: Right-sided pleural effusion (small \u2014 2cm depth). Ascites: Small perihepatically and perisplenic \u2014 plasma leakage.\nGallbladder: Wall oedema (GB wall 6mm \u2014 thickened). Pericholecystic fluid.\nSpleen: Mildly enlarged (13cm).\nLiver: Normal size, mildly heterogeneous.\n\nImpression: Pleural effusion + ascites + GB wall oedema = third-spacing from plasma leakage. Hallmark of dengue haemorrhagic fever / dengue with warning signs.",
+          "yield": "high"
+        },
+        {
+          "id": "i2",
+          "modality": "X-Ray",
+          "region": "Chest",
+          "cost_points": 35,
+          "report": "Right basal haziness \u2014 small right pleural effusion.\nLeft lung: Clear.\nHeart size: Upper normal.\nNo consolidation.\n\nImpression: Small right pleural effusion consistent with plasma leakage in dengue. No pneumonia.",
+          "yield": "medium"
+        },
+        {
+          "id": "i3",
+          "modality": "X-Ray",
+          "region": "Chest \u2014 follow-up 48hrs",
+          "cost_points": 35,
+          "report": "Bilateral pleural effusions (right larger than left) \u2014 increased from 24 hours ago.\nNo consolidation. No pulmonary oedema on CXR.\n\nImpression: Expanding pleural effusions during critical phase of dengue \u2014 monitor respiratory status closely. If SpO2 falling, reassess for dengue shock syndrome.",
+          "yield": "low"
+        }
+      ],
+      "differential_decoys": [
+        "Typhoid fever with thrombocytopaenia",
+        "Leptospirosis",
+        "Scrub typhus",
+        "Idiopathic Thrombocytopaenic Purpura (ITP)"
+      ],
+      "optimal_path": {
+        "history_ids": [
+          "h1",
+          "h2",
+          "h4"
+        ],
+        "exam_ids": [
+          "e1",
+          "e3",
+          "e4",
+          "e5"
+        ],
+        "lab_ids": [
+          "l1",
+          "l3",
+          "l4",
+          "l6"
+        ],
+        "imaging_ids": [
+          "i1"
+        ],
+        "explanation": "Monsoon season + Chennai + 5-day fever + thrombocytopaenia in a teenager = dengue until proven otherwise. The critical insight is recognising WARNING SIGNS on day 4\u20135: abdominal pain, vomiting, bleeding, rising haematocrit, narrow pulse pressure. NS1 antigen confirms active dengue. Rising haematocrit + falling platelets + hypoalbuminaemia = plasma leakage confirmed. USG showing pleural effusion + ascites = critical phase. Admit and monitor 4-hourly haematocrit."
+      },
+      "debrief": {
+        "pathophysiology": "Dengue is caused by DENV (4 serotypes) transmitted by Aedes aegypti mosquito. Primary infection produces immunity to that serotype. Secondary infection with a different serotype causes antibody-dependent enhancement (ADE) \u2014 cross-reactive antibodies bind but do not neutralise new serotype, instead facilitating greater viral entry into monocytes. This triggers massive cytokine release, endothelial injury, and plasma leakage. Plasma leaks from intravascular to third spaces (pleura, peritoneum) causing haemoconcentration (rising haematocrit) and hypovolaemia.",
+        "classic_presentation": "Sudden high fever, severe headache, retro-orbital pain, myalgia, arthralgia ('breakbone fever'). Rash \u2014 maculopapular or petechial. Thrombocytopaenia and leucopaenia. On day 4\u20135, defervescence with WARNING SIGNS: abdominal pain, persistent vomiting, rapid breathing, bleeding, liver enlargement, restlessness or lethargy. Without hospitalisation, can progress to dengue shock syndrome (narrow pulse pressure or hypotension).",
+        "key_discriminators": [
+          "Rising haematocrit (>20% from baseline) = plasma leakage = dengue haemorrhagic fever criterion",
+          "Narrow pulse pressure < 20 mmHg = early dengue shock \u2014 do not confuse as 'improving' because fever came down",
+          "GB wall oedema + pleural effusion + ascites on USG = third-spacing from plasma leakage",
+          "Warning signs on day 4\u20135 after fever defervescence = most dangerous window"
+        ],
+        "common_mimics": [
+          "Typhoid fever \u2014 'step-ladder' fever, relative bradycardia, rose spots, Widal titre positive, responds to antibiotics",
+          "Scrub typhus \u2014 eschar at bite site, lymphadenopathy, Weil-Felix positive, responds to doxycycline",
+          "ITP \u2014 isolated thrombocytopaenia without fever or systemic illness, no serological evidence of infection"
+        ],
+        "treatment": "STOP NSAIDs immediately \u2014 only paracetamol for fever. Admit for monitoring. IV fluids: Ringer's Lactate, NOT saline. Do NOT over-hydrate \u2014 can worsen third-spacing and cause pulmonary oedema. Titrate fluids to haematocrit every 4\u20136 hours. Platelet transfusion: only if < 10,000 or active significant bleeding \u2014 NOT prophylactically for low counts. Monitor for shock: pulse pressure, capillary refill, urine output. Dengue shock: IV crystalloid bolus 10\u201320 mL/kg over 15 minutes. No steroids, no antibiotics (unless co-infection proven).",
+        "clinical_pearl": "Haematocrit rise of 20% or more from baseline is the most sensitive indicator of plasma leakage and imminent dengue shock. A patient whose fever comes down on day 4\u20135 but whose haematocrit is rising is getting worse, not better. The defervescence phase is the most dangerous phase of dengue \u2014 not the febrile phase. This counter-intuitive fact leads to many delayed recognitions of shock.",
+        "attendings_note": "The local doctor gave Combiflam and called it viral fever. That is the one medication you must never give in dengue \u2014 ibuprofen and aspirin further inhibit platelets that are already being destroyed. By the time I saw him, his platelets were at 32 and he had a nosebleed. The Combiflam did not cause the dengue but it made the bleeding worse.\n\nNow look at the pulse pressure. The boy has BP 102/80 \u2014 the nurses recorded it as 'normal BP.' But the pulse pressure is 22 \u2014 that is abnormal. A pulse pressure below 20 means early shock. His body is compensating by raising diastolic. This is the subtlest and most important vital sign in dengue. I want you to calculate pulse pressure in every dengue patient, every time you check BP.\n\nThe parents thought he was getting better because the fever was coming down on day 4. This is the most dangerous misconception in dengue. Tell every dengue patient and family: defervescence is not recovery \u2014 it is the beginning of the critical phase. Day 4\u20136 is when we watch the most closely.",
+        "india_context": "Chennai is hyperendemic for dengue with serotypes 1\u20134 all circulating. The Aedes aegypti mosquito breeds in clean stagnant water \u2014 coolers, flower pots, construction sites, water tanks. Post-monsoon October\u2013November is the peak season. All dengue cases must be notified to NVBDCP. Under-reporting is massive \u2014 official figures represent roughly 10% of actual cases. Platelet transfusion is frequently overused in India \u2014 evidence does not support transfusion unless platelets < 10,000 or significant active bleeding.",
+        "learning_tags": [
+          "dengue_warning_signs",
+          "haematocrit_rising",
+          "narrow_pulse_pressure",
+          "plasma_leakage",
+          "ns1_antigen",
+          "antibody_dependent_enhancement",
+          "nsaid_contraindication_dengue",
+          "critical_phase_defervescence",
+          "premature_discharge"
+        ]
+      },
+      "related_cases": [
+        {
+          "label": "Same disease, progression to shock",
+          "teaser": "14M dengue day 6, BP 80/70, pulse pressure 10 mmHg, cold peripheries, Hct 58%",
+          "teaches": "Dengue shock syndrome \u2014 fluid resuscitation protocol, when to give colloids, when to transfuse"
+        },
+        {
+          "label": "Classic mimic",
+          "teaser": "18M, fever 7 days, relative bradycardia, rose spots on abdomen, Widal 1:160 Typhoid O",
+          "teaches": "Typhoid fever \u2014 step-ladder fever, rose spots, Widal interpretation, and fluoroquinolone resistance"
+        },
+        {
+          "label": "Same monsoon season, different disease",
+          "teaser": "22M, fever + jaundice + renal failure + conjunctival redness, works in waterlogged field",
+          "teaches": "Leptospirosis \u2014 Weil's disease presentation, same monsoon season but different transmission and management"
+        }
+      ],
+      "tier_costs": {
+        "history": 5,
+        "exam": 10,
+        "labs": 20,
+        "imaging": 35
+      }
+    }
+  ]
+}
